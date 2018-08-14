@@ -1,10 +1,16 @@
-body {
+html, body, #root {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  height: 100%;
-  width: 100%;
+  overflow-x: hidden;
+  min-width: 100%;
   max-width: 100%;
+}
+
+html {
+  -webkit-background-image: linear-gradient(to bottom, #ff9c00, #91212e);
+  -moz-background-image: linear-gradient(to bottom, #ff9c00, #91212e);
+  background-image: linear-gradient(to bottom, #ff9c00, #91212e)
 }
 
 @font-face {

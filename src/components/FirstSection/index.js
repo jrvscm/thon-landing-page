@@ -6,11 +6,11 @@ import HeaderPattern from '../../assets/images/header-pattern-cropped.png';
 import LogoSvg from '../../assets/images/logo-light-red.png';
 import StackedIphones from '../../assets/images/stacked-iphones.png';
 import { orange, darkRed, lightRed, white } from '../../colors.js';
-import { mediaQueries } from '../../UIElements.js';
+import { mediaQueries, Row } from '../../UIElements.js';
 
 const FirstSection = () => (
 	<Container>
-		<BackGround>
+		<Background>
 			<Row>
 				<Col>
 					<InnerRow>
@@ -30,7 +30,7 @@ const FirstSection = () => (
 				</Col>
 				<Iphones src={StackedIphones} />
 			</Row>
-		</BackGround>
+		</Background>
 	</Container>
 )
 
@@ -38,32 +38,21 @@ export default FirstSection;
 
 const Container = glamorous.div({
 	height: `100%`,
-	minHeight: `100vh`,
 	width: `100%`,
-	minWidth: `100vw`,
 	display: `flex`,
 	flexDirection: `column`,
 	alignItems: `center`,
 	justyfContent: `center`
 })
 
-const BackGround = glamorous.div({
+const Background = glamorous.div({
 	height: `100vh`,
 	width: `100vw`,
-	backgroundColor: orange,
+	paddingBottom: `20vh`,
 	backgroundImage: `url(${HeaderPattern})`,
 	backgroundSize: `cover`,
 	backgroundPosition: `center center`,
 	backgroundRepeat: `no-repeat`
-})
-
-const Row = glamorous.div({
-	height: `100%`,
-	width: `100%`,
-	display: `flex`,
-	flexDirection: `row`,
-	alignItems: `center`,
-	justifyContent: `center`
 })
 
 const InnerRow = glamorous.div({
@@ -83,8 +72,8 @@ const Col = glamorous.div({
 })
 
 const Logo = glamorous.div({
-	height: 75,
-	width: 75,
+	height: 80,
+	width: 80,
 	marginRight: 5,
 	backgroundImage: `url(${LogoSvg})`,
 	backgroundSize: `cover`,
@@ -103,7 +92,7 @@ const H1 = glamorous.h1({
 const P = glamorous.p({
 	fontSize: 40,
 	fontFamily: 'SF-Pro-Text-Light',
-	fontWeight: 900,
+	fontWeight: 400,
   fontStyle: `normal`,
   fontStretch: `normal`,
   lineHeight: `normal`,
@@ -134,5 +123,5 @@ const Button = glamorous.button({
 })
 
 const Iphones = glamorous.img({
-	maxHeight: 700
+	height: `80%`
 })
