@@ -11,7 +11,7 @@ import { mediaQueries, Row } from '../../UIElements.js';
 const FirstSection = () => (
 	<Container>
 		<Background>
-			<Row>
+			<GlamorousRow>
 				<Col>
 					<InnerRow>
 						<Logo />
@@ -29,7 +29,7 @@ const FirstSection = () => (
 					</InnerRow>
 				</Col>
 				<Iphones src={StackedIphones} />
-			</Row>
+			</GlamorousRow>
 		</Background>
 	</Container>
 )
@@ -124,4 +124,8 @@ const Button = glamorous.button({
 
 const Iphones = glamorous.img({
 	height: `80%`
+})
+
+const GlamorousRow = glamorous(Row)({
+	height: `100%`
 })

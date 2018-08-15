@@ -8,7 +8,6 @@ export const mediaQueries = {
 }
 
 export const Row = glamorous.div({
-	height: `100%`,
 	width: `100%`,
 	display: `flex`,
 	flexDirection: `row`,
@@ -17,7 +16,6 @@ export const Row = glamorous.div({
 })
 
 export const Col = glamorous.div({
-	height: `100%`,
 	width: `100%`,
 	display: `flex`,
 	flexDirection: `column`,
@@ -25,4 +23,11 @@ export const Col = glamorous.div({
 	justifyContent: `center`
 })
 
-//adding this comment for a test
+export const VerticalRow = glamorous(Row)({ 
+	width: `auto`,
+	WebkitTransform: `rotate(270deg)`,
+  MozTransform: `rotate(270deg)`,
+  OTransform: `rotate(270deg)`,
+  MsTransform: `rotate(270deg)`,
+  transform: `rotate(270deg)`
+})
