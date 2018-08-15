@@ -24,3 +24,5 @@ export const Col = glamorous.div({
 	alignItems: `center`,
 	justifyContent: `center`
 })
+
+//adding this comment for a test
