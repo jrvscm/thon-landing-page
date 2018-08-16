@@ -24,10 +24,10 @@ export const Col = glamorous.div({
 })
 
 export const VerticalRow = glamorous(Row)({ 
-	width: `auto`,
 	WebkitTransform: `rotate(270deg)`,
   MozTransform: `rotate(270deg)`,
   OTransform: `rotate(270deg)`,
   MsTransform: `rotate(270deg)`,
-  transform: `rotate(270deg)`
+  transform: `rotate(270deg)`,
+  width: `auto`
 })

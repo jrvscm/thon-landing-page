@@ -2,7 +2,8 @@ import React from 'react';
 import glamorous from 'glamorous';
 
 import CurveBackgroundOne from '../../assets/images/curve-background-one.png';
-import GetFundedScreen from '../../assets/images/get-funded-arrows.png';
+import GetFunded from '../../assets/images/get-funded-arrows.png';
+import DiscoverInnovation from '../../assets/images/discover-innovation-arrows.png';
 import OrangeSlashes from '../../assets/images/orange-slashes.png';
 import RedSlashes from '../../assets/images/red-slashes.png';
 import Bullet from '../../assets/images/arrow-bullet.png';
@@ -14,27 +15,25 @@ const SecondSection = () => (
 		<Background src={CurveBackgroundOne} />
 		<ContentContainer>
 			<Row>
-				<Col style={{width: `20%`, minWidth: 350}}>
+				<LabelCol>
 					<VerticalRow>
 						<Slashes src={OrangeSlashes} />
 						<P>GET FUNDED</P>
 					</VerticalRow>
-				</Col>
+				</LabelCol>
 				<Col>
-					<Row style={{justifyContent: `flex-start`}}>
-						<Col style={{width: `30%`}}>
-							<GetFunded src={GetFundedScreen} />
+					<Row>
+						<Col style={{alignItems: `flex-end`, width: `40%`}}>
+							<IphoneScreen src={GetFunded} />
 						</Col>
-						<Col style={{width: `50%`}}>
-							<div style={{marginBottom: 25}}>
-								<P>FUND YOUR FAVORITE INNOVATION</P>
-								<Text>
+						<Col style={{alignItems: `flex-start`, width: `60%`}}>
+							<div style={{maxWidth: 700}}>
+								<P style={{marginBottom: 15}}>FUND YOUR FAVORITE INNOVATION</P>
+								<Text style={{marginBottom: 25}}>
 									#Thon is a place where innovators and passionate backers come together to support ideas
 									born at hackathons. Explore and Follow innovative apps, websites, products and more, and
 									Upvote your favorite right from the app.
 								</Text>
-							</div>
-							<div>
 								<Text>With the thon app, you can:</Text>
 								<List>
 									<Li><Text>Fund innovative solutions to help make new ideas stay alive</Text></Li>
@@ -54,41 +53,46 @@ const SecondSection = () => (
 			</Row>
 			<HR />
 			<Row>
-				<Col style={{width: `20%`, minWidth: 350}}>
+				<LabelCol>
 					<VerticalRow>
 						<Slashes src={RedSlashes} />
 						<P style={{color: lightRed}}>DISCOVER INNOVATION</P>
 					</VerticalRow>
+				</LabelCol>
+				<Col style={{width: `60%`, alignItems: `flex-end`}}>
+					<div style={{maxWidth: 700, textAlign: `right`}}>
+						<P style={{color: lightRed, marginBottom: 15}}>UPVOTE</P>
+						<Text style={{marginBottom: 25}}>
+							When you're logged in to #Thon, you'll be able to upvote items to help determine their rank.
+							You get one vote per item, but you can change it after it's logged. The number appearing at
+							the up arrows is the submission's score: the number of funds raised. Upvotes allow you to get
+							exposure for your message, brand, or product and have a snowball effect on the traffic a post
+							receives.
+						</Text>
+						<Text style={{marginBottom: 25}}>
+							An upvote on thon is very different than a vote on any other social-media website. Clicking
+							that little arrow is much more than a "Like" on Facebook or a "Heart" on Instagram. On #Thon,
+							votes are rewarded with US dollars or cryptocurrencies!
+						</Text>
+						<Text style={{marginBottom: 25}}>
+							When you click the upvote button you are telling the Blockchain, "this is where I want X amount
+							of the daily rewards pool to go." The amount that you're able to direct is dependent on the amount
+							of Privilege you have. So the more Privilege you have, the more of the daily rewards pool you can
+							direct to ideas you like!
+						</Text>
+						<P style={{color: lightRed, marginBottom: 15}}>DISCOVER</P>
+						<Text style={{marginBottom: 25}}>
+							Discover your next favorite innovation app, website, product. We showcase the best new products
+							and apps every day.
+						</Text>
+						<Text style={{marginBottom: 25}}>
+							This is the place to find innovation you love and share them with friends. A global community of
+							innovators founders, mentors, investors, journalists, creators, entrepreneurs and makers.
+						</Text>
+					</div>
 				</Col>
-				<Col style={{width: `50%`}}>
-					<P style={{color: lightRed}}>UPVOTE</P>
-					<Text>
-						When you're logged in to #Thon, you'll be able to upvote items to help determine their rank.
-						You get one vote per item, but you can change it after it's logged. The number appearing at
-						the up arrows is the submission's score: the number of funds raised. Upvotes allow you to get
-						exposure for your message, brand, or product and have a snowball effect on the traffic a post
-						receives.
-					</Text>
-					<Text>
-						An upvote on thon is very different than a vote on any other social-media website. Clicking
-						that little arrow is much more than a "Like" on Facebook or a "Heart" on Instagram. On #Thon,
-						votes are rewarded with US dollars or cryptocurrencies!
-					</Text>
-					<Text>
-						When you click the upvote button you are telling the Blockchain, "this is where I want X amount
-						of the daily rewards pool to go." The amount that you're able to direct is dependent on the amount
-						of Privilege you have. So the more Privilege you have, the more of the daily rewards pool you can
-						direct to ideas you like!
-					</Text>
-					<P style={{color: lightRed}}>DISCOVER</P>
-					<Text>
-						Discover your next favorite innovation app, website, product. We showcase the best new products
-						and apps every day.
-					</Text>
-					<Text>
-						This is the place to find innovation you love and share them with friends. A global community of
-						innovators founders, mentors, investors, journalists, creators, entrepreneurs and makers.
-					</Text>
+				<Col style={{width: `40%`, alignItems: `flex-start`}}>
+					<IphoneScreen src={DiscoverInnovation} />
 				</Col>					
 			</Row>
 		</ContentContainer>
@@ -104,7 +108,7 @@ const Container = glamorous.div({
 	backgroundColor: `transparent`,
 	display: `flex`,
 	flexDirection: `column`,
-	aLignItems: `center`,
+	alignItems: `center`,
 	justifyContent: `center`
 })
 
@@ -121,7 +125,7 @@ const ContentContainer = glamorous.div({
 	left: 0,
 	display: `flex`,
 	flexDirection: `column`,
-	aLignItems: `center`,
+	alignItems: `center`,
 	justifyContent: `center`
 })
 
@@ -148,11 +152,11 @@ const Slashes = glamorous.img({
   marginRight: 25
 })
 
-const GetFunded = glamorous.img({
+const IphoneScreen = glamorous.img({
 	height: `100%`,
 	width: `100%`,
-	maxHeight: 500,
-	maxWidth: 280
+	maxHeight: 550,
+	maxWidth: 330
 })
 
 const HR = glamorous.hr({
@@ -182,4 +186,15 @@ const Li = glamorous.li({
 
 const List = glamorous.ul({
 	listStyle: `square outside url(${Bullet})`
+})
+
+const LabelCol = glamorous.div({
+	position: `absolute`, 
+	left: 0,
+	width: 600,
+	marginLeft: -150,
+	display: `flex`,
+	flexDirection: `column`,
+	alignItems: `center`,
+	justifyContent: `center`
 })
