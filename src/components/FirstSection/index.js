@@ -6,7 +6,7 @@ import HeaderPattern from '../../assets/images/header-pattern-cropped.png';
 import LogoSvg from '../../assets/images/logo-light-red.png';
 import StackedIphones from '../../assets/images/stacked-iphones.png';
 import { orange, darkRed, lightRed, white } from '../../colors.js';
-import { mediaQueries, Row } from '../../UIElements.js';
+import { mediaQueries, Row, SubscribeButton } from '../../UIElements.js';
 
 const FirstSection = () => (
 	<Container>
@@ -25,7 +25,7 @@ const FirstSection = () => (
 						</P>
 					</InnerRow>
 					<InnerRow>
-						<Button>SUBSCRIBE</Button>
+						<SubscribeButton>SUBSCRIBE</SubscribeButton>
 					</InnerRow>
 				</Col>
 				<Iphones src={StackedIphones} />
@@ -104,22 +104,6 @@ const P = glamorous.p({
   [mediaQueries.med]: {
   	fontSize: 25
   }
-})
-
-const Button = glamorous.button({
-	height: 70,
-	width: 300,
-	borderRadius: 39,
-	backgroundColor: lightRed,
-	color: white,
-	border: `none`,
-	fontFamily: 'SF-Pro-Text-Light',
-	fontSize: 30,
-	fontWeight: 500,
-	fontStyle: `normal`,
-	fontStretch: `normal`,
-	fontHeight: `normal`,
-	letterSpacing: 0.5
 })
 
 const Iphones = glamorous.img({

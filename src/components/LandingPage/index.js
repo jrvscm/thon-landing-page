@@ -4,12 +4,16 @@ import glamorous from 'glamorous';
 import FirstSection from '../FirstSection';
 import SecondSection from '../SecondSection';
 import ThirdSection from '../ThirdSection';
+import FourthSection from '../FourthSection';
+import FooterSection from '../FooterSection';
 
 const LandingPage = () => (
 	<Container>
 		<FirstSection />
 		<SecondSection />
 		<ThirdSection />
+		<FourthSection />
+		<FooterSection />
 	</Container>
 )
 

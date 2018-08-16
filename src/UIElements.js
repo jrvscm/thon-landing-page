@@ -1,5 +1,6 @@
 import glamorous from 'glamorous';
 import Bullet from './assets/images/arrow-bullet.png';
+import { white, lightRed } from './colors';
 
 export const mediaQueries = {
 	large: '@media only screen and (max-width: 1600px)',
@@ -43,8 +44,8 @@ export const IphoneScreen = glamorous.img({
 export const LabelCol = glamorous.div({
 	position: `absolute`, 
 	left: 0,
-	width: 600,
-	marginLeft: -150,
+	width: 1000,
+	marginLeft: -350,
 	display: `flex`,
 	flexDirection: `column`,
 	alignItems: `center`,
@@ -104,4 +105,25 @@ export const Li = glamorous.li({
 
 export const List = glamorous.ul({
 	listStyle: `square outside url(${Bullet})`
+})
+
+export const Background = glamorous.img({
+	height: `100%`,
+	width: `100%`
+})
+
+export const SubscribeButton = glamorous.button({
+	height: 70,
+	width: 300,
+	borderRadius: 39,
+	backgroundColor: lightRed,
+	color: white,
+	border: `none`,
+	fontFamily: 'SF-Pro-Text-Light',
+	fontSize: 30,
+	fontWeight: 500,
+	fontStyle: `normal`,
+	fontStretch: `normal`,
+	fontHeight: `normal`,
+	letterSpacing: 0.5
 })

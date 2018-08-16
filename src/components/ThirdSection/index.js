@@ -1,12 +1,16 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
-import { white, textGrey } from '../../colors.js';
+import RedSlashes from '../../assets/images/red-slashes.png';
+import GetNewSkills from '../../assets/images/get-new-skills-arrows.png';
+import WhiteSlashes from '../../assets/images/white-slashes.png';
+import { white } from '../../colors.js';
 import { 
 	mediaQueries, 
 	Row, 
 	Col, 
 	VerticalRow, 
+	Slashes,
 	LabelCol, 
 	P,
 	Li,
@@ -20,34 +24,52 @@ const ThirdSection = () => (
 		<Row>
 			<LabelCol>
 				<VerticalRow>
+					<Slashes src={WhiteSlashes} />
 					<P color={white}>GET NEW SKILLS</P>
 				</VerticalRow>
 			</LabelCol>
 			<Col>
-				<Row>
-					<Col style={{alignItems: `flex-end`, width: `40%`}}>
-					</Col>
-					<Col style={{alignItems: `flex-start`, width: `60%`}}>
-						<div style={{maxWidth: 700}}>
-							<P color={white} style={{marginBottom: 15}}>FUND YOUR FAVORITE INNOVATION</P>
-							<Text color={textGrey} style={{marginBottom: 25}}>
-								#Thon is a place where innovators and passionate backers come together to support ideas
-								born at hackathons. Explore and Follow innovative apps, websites, products and more, and
-								Upvote your favorite right from the app.
+				<Row style={{paddingTop: 70, paddingBottom: 160}}>
+					<Col style={{width: `20%`}}>
+						<div style={{textAlign: `right`}}>
+							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
+								DON'T JUST LEARN – LEARN<br />  
+								TO INNOVATE<br />
+								LEARN SPECIFIC SKILLS:
 							</Text>
-							<Text color={textGrey}>With the thon app, you can:</Text>
-							<List>
-								<Li><Text color={textGrey}>Fund innovative solutions to help make new ideas stay alive</Text></Li>
-								<Li><Text color={textGrey}>Save your favorites and get reminders before projects end</Text></Li>
-								<Li><Text color={textGrey}>Share innovative ideas with friends via email, messaging, social media and more</Text></Li>
-							</List>
-							<Text color={textGrey}>Innovators can stay up to date from anywhere:</Text>
-							<List>
-								<Li><Text color={textGrey}>Get notified each time you receive funding</Text></Li>
-								<Li><Text color={textGrey}>Keep up with comments and upvotes</Text></Li>
-								<Li><Text color={textGrey}>Post updates and respond to backer messages</Text></Li>
-							</List>
+							<Text color={white} style={{paddingBottom: 25, fontWeight: 300}}>
+ 								Learn from 100+ companies -<br /> 
+ 								from Cryptocurrency and Blockchain to Artificial Intelligence, 
+								Machine Learning, Data Science, Marketing and Photoshop.							
+							</Text>
+							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
+								LEARN FROM EXPERTS:
+							</Text>
+							<Text color={white} style={{paddingBottom: 25, fontWeight: 300}}>
+								Be inspired by 1000+ mentors, expert instructors. Keep learning even when you're offline.
+							</Text>
 						</div>
+					</Col>
+					<Col style={{width: `20%`}}>
+						<IphoneScreen src={GetNewSkills} />
+					</Col>
+					<Col style={{width: `20%`, alignItems: `flex-start`}}>
+						<div style={{textAlign: `left`}}>
+							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
+								BE PART OF A COMMUNITY: 
+							</Text>
+							<Text color={white} style={{paddingBottom: 25, fontWeight: 300}}>
+								Connect with a mentor, interact with other learners, or post questions for your instructor.						
+							</Text>
+							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
+								EARN SHAREABLE CERTIFICATES:
+							</Text>
+							<Text color={white} style={{paddingBottom: 25, fontWeight: 300}}>
+								Easily share your achievements with employers, colleagues and friends
+								Thon offers free and paid courses including video lecture and reading materials. Paid courses unlock 
+								quizzes and award you a Certificate
+							</Text>
+						</div>				
 					</Col>		
 				</Row>
 			</Col>

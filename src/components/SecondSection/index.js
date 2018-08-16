@@ -8,6 +8,7 @@ import OrangeSlashes from '../../assets/images/orange-slashes.png';
 import RedSlashes from '../../assets/images/red-slashes.png';
 import { orange, darkRed, lightRed, white, textGrey } from '../../colors.js';
 import { 
+	Background,
 	mediaQueries, 
 	Row, 
 	Col, 
@@ -122,11 +123,6 @@ const Container = glamorous.div({
 	flexDirection: `column`,
 	alignItems: `center`,
 	justifyContent: `center`
-})
-
-const Background = glamorous.img({
-	height: `100%`,
-	width: `100%`
 })
 
 const ContentContainer = glamorous.div({
