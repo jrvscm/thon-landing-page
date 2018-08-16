@@ -1,4 +1,5 @@
 import glamorous from 'glamorous';
+import Bullet from './assets/images/arrow-bullet.png';
 
 export const mediaQueries = {
 	large: '@media only screen and (max-width: 1600px)',
@@ -30,4 +31,77 @@ export const VerticalRow = glamorous(Row)({
   MsTransform: `rotate(270deg)`,
   transform: `rotate(270deg)`,
   width: `auto`
+})
+
+export const IphoneScreen = glamorous.img({
+	height: `100%`,
+	width: `100%`,
+	maxHeight: 550,
+	maxWidth: 330
+})
+
+export const LabelCol = glamorous.div({
+	position: `absolute`, 
+	left: 0,
+	width: 600,
+	marginLeft: -150,
+	display: `flex`,
+	flexDirection: `column`,
+	alignItems: `center`,
+	justifyContent: `center`
+})
+
+export const P = glamorous.p({
+	fontFamily: 'SF-Pro-Text-Light',
+  fontSize: 36,
+  fontWeight: `bold`,
+  fontStyle: `normal`,
+  fontStretch: `normal`,
+  LineHeight: `normal`,
+  letterSpacing: 0.4,
+  margin: 0
+}, ({color}) => ({
+  color: color,
+}))
+
+export const HR = glamorous.hr({
+	marginTop: 100,
+	marginBottom: 100,
+  width: 1000,
+  height: 0,
+}, ({color}) => ({
+  border: `solid .5px ${color}`
+}))
+
+export const Slashes = glamorous.img({
+	height: 75,
+	width: 75,
+	WebkitTransform: `rotate(270deg)`,
+  MozTransform: `rotate(270deg)`,
+  OTransform: `rotate(270deg)`,
+  MsTransform: `rotate(270deg)`,
+  transform: `rotate(270deg)`,
+  marginRight: 25
+})
+
+export const Text = glamorous.p({
+	fontFamily: `SF-Pro-Text-Light`,
+  fontSize: 20,
+  fontWeight: 900,
+  fontStyle: `normal`,
+  fontStretch: `normal`,
+  LineHeight: 1.2,
+  letterSpacing: 0.2,
+  margin: 2
+ }, ({color}) => ({
+ 	color: color
+}))
+
+export const Li = glamorous.li({
+	margin: 0,
+	padding: 0,
+})
+
+export const List = glamorous.ul({
+	listStyle: `square outside url(${Bullet})`
 })
