@@ -72,7 +72,11 @@ const Col = glamorous.div({
 
 const Logo = glamorous.img({
 	height: 300,
-	width: 300
+	width: 300,
+	[mediaQueries.small]:{
+		height: 250,
+		width: 250
+	}
 })
 
 const H1 = glamorous.h1({
@@ -93,17 +97,29 @@ const P = glamorous.p({
   letterSpacing: 0.5,
   color: white,
   marginTop: -80,
-  [mediaQueries.large]: {
+  [mediaQueries.regular]: {
   	fontSize: 30
   },
   [mediaQueries.med]: {
   	fontSize: 25
+  },
+  [mediaQueries.small]:{
+  	fontSize: 20
   }
 })
 
 const Iphones = glamorous.img({
 	height: `90%`,
-	marginTop: 100
+	marginTop: 100,
+	[mediaQueries.regular]:{
+		height: `70%`,
+	},
+	[mediaQueries.med]:{
+		height: `60%`
+	},
+	[mediaQueries.small]:{
+		height: `50%`
+	}
 })
 
 const GlamorousRow = glamorous(Row)({

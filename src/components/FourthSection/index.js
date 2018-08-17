@@ -6,7 +6,8 @@ import ShowcaseYourInnovation from '../../assets/images/showcase-your-innovation
 import OrangeSlashes from '../../assets/images/orange-slashes.png'; 
 import RedSlashes from '../../assets/images/red-slashes.png'; 
 import CurveBackgroundTwo from '../../assets/images/curve-background-two.png';
-import { 
+import {
+	mediaQueries, 
 	Background, 
 	Row, 
 	LabelCol, 
@@ -39,7 +40,7 @@ const FourthSection = () => (
 							<ShowcaseIphoneScreen src={ShowcaseYourInnovation} />
 						</Col>
 						<Col style={{alignItems: `flex-start`, width: `60%`}}>
-							<div style={{maxWidth: 700, marginLeft: 25}}>
+							<SizerOne>
 								<Text color={textGrey} style={{marginBottom: 25}}>
 									This is a place to showcase your innovation, protect your idea.
 								</Text>
@@ -56,7 +57,7 @@ const FourthSection = () => (
 									Join the millions of entrepreneurs and supporters who have found a place to connect over the 
 									innovation they love. Take your innovation to the next level with #Thon
 								</Text>
-							</div>
+							</SizerOne>
 						</Col>		
 					</Row>
 				</Col>
@@ -70,7 +71,7 @@ const FourthSection = () => (
 					</VerticalRow>
 				</LabelCol>
 				<Col style={{width: `60%`, alignItems: `flex-end`}}>
-					<div style={{maxWidth: 600, textAlign: `right`, marginRight: 25}}>
+					<SizerTwo>
 						<Text color={textGrey} style={{marginBottom: 25}}>
 							Create a fundraising hackathon quickly and easily. Start accepting funding in minutes. Share your event 
 							on Facebook, Instagram, WhatsApp,Twitter, email or text message. Get notified each time someone funds.
@@ -81,7 +82,7 @@ const FourthSection = () => (
 						<Text color={textGrey}>
 							Fund hackathon directly from the app. Search for hackathon to support that matter to you.
 						</Text>
-					</div>
+					</SizerTwo>
 				</Col>
 				<Col style={{width: `40%`, alignItems: `flex-start`}}>
 					<CommunityIphoneScreen src={BuildYourCommunity} />
@@ -116,9 +117,48 @@ const ContentContainer = glamorous.div({
 })
 
 const ShowcaseIphoneScreen = glamorous(IphoneScreen)({
-	minWidth: 380
+	width: 380,
+	[mediaQueries.med]:{
+		height: 500,
+		width: 300
+	},
+	[mediaQueries.small]:{
+		height: 450,
+		width: 280
+	}	
 })
 
 const CommunityIphoneScreen = glamorous(IphoneScreen)({
-	minWidth: 380
+	width: 380,
+	[mediaQueries.med]:{
+	height: 500,
+	width: 300
+},
+	[mediaQueries.small]:{
+	height: 500,
+	width: 320
+}
+})
+
+const SizerOne = glamorous.div({
+	maxWidth: 700, 
+	marginLeft: 25,
+	[mediaQueries.med]:{
+		maxWidth: 550
+	},
+	[mediaQueries.small]:{
+		maxWidth: 450
+	}
+})
+
+const SizerTwo = glamorous.div({
+	maxWidth: 600, 
+	textAlign: `right`, 
+	marginRight: 25,
+	[mediaQueries.med]:{
+		maxWidth: 500
+	},
+	[mediaQueries.small]:{
+		maxWidth: 400
+	}
 })

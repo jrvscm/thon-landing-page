@@ -40,7 +40,7 @@ const SecondSection = () => (
 							<FundIphoneScreen src={GetFunded} />
 						</Col>
 						<Col style={{alignItems: `flex-start`, width: `60%`}}>
-							<div style={{maxWidth: 650, marginLeft: 25}}>
+							<Sizer>
 								<P color={orange} style={{marginBottom: 15}}>FUND YOUR FAVORITE INNOVATION</P>
 								<Text color={textGrey} style={{marginBottom: 25}}>
 									#Thon is a place where innovators and passionate backers come together to support ideas
@@ -59,7 +59,7 @@ const SecondSection = () => (
 									<Li><Text color={textGrey}>Keep up with comments and upvotes</Text></Li>
 									<Li><Text color={textGrey}>Post updates and respond to backer messages</Text></Li>
 								</List>
-							</div>
+							</Sizer>
 						</Col>		
 					</Row>
 				</Col>
@@ -73,7 +73,7 @@ const SecondSection = () => (
 					</VerticalRow>
 				</LabelCol>
 				<Col style={{width: `60%`, alignItems: `flex-end`}}>
-					<div style={{maxWidth: 700, textAlign: `right`, marginRight: 25}}>
+					<SizerTwo>
 						<P color={lightRed} style={{marginBottom: 15}}>UPVOTE</P>
 						<Text color={textGrey} style={{marginBottom: 25}}>
 							When you're logged in to #Thon, you'll be able to upvote items to help determine their rank.
@@ -102,7 +102,7 @@ const SecondSection = () => (
 							This is the place to find innovation you love and share them with friends. A global community of
 							innovators founders, mentors, investors, journalists, creators, entrepreneurs and makers.
 						</Text>
-					</div>
+					</SizerTwo>
 				</Col>
 				<Col style={{width: `40%`, alignItems: `flex-start`}}>
 					<DiscoverIphoneScreen src={DiscoverInnovation} />
@@ -138,9 +138,46 @@ const ContentContainer = glamorous.div({
 })
 
 const FundIphoneScreen = glamorous(IphoneScreen)({
-	minWidth: 380
+	width: 380,
+	[mediaQueries.med]:{
+		height: 500,
+		width: 300
+	},
+	[mediaQueries.small]:{
+		height: 450,
+		width: 280
+	}
 })
 
 const DiscoverIphoneScreen = glamorous(IphoneScreen)({
-	minWidth: 380
+	width: 380,
+	[mediaQueries.small]:{
+		height: 500,
+		width: 320
+	}
+})
+
+const Sizer = glamorous.div({
+	maxWidth: 700,
+	marginLeft: 25,
+	[mediaQueries.small]:{
+		maxWidth: 450,
+		marginLeft: 15
+	}
+})
+
+const SizerTwo=glamorous.div({
+	maxWidth: 700,
+	marginRight: 25,
+	textAlign: `right`,
+	[mediaQueries.regular]:{
+		maxWidth: 500
+	},
+	[mediaQueries.med]:{
+		maxWidth: 450
+	},
+	[mediaQueries.small]:{
+		marginRight: 15,
+		maxWidth: 350
+	}
 })

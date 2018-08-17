@@ -30,7 +30,7 @@ const ThirdSection = () => (
 			</LabelCol>
 			<Col>
 				<Row style={{paddingTop: 70, paddingBottom: 160}}>
-					<Col style={{width: `20%`}}>
+					<TextCol>
 						<div style={{textAlign: `right`}}>
 							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
 								DON'T JUST LEARN – LEARN<br />  
@@ -49,11 +49,11 @@ const ThirdSection = () => (
 								Be inspired by 1000+ mentors, expert instructors. Keep learning even when you're offline.
 							</Text>
 						</div>
-					</Col>
-					<Col style={{width: `30%`, marginRight: 25, marginLeft: 25}}>
+					</TextCol>
+					<ImageCol>
 						<GlamorousIphoneScreen src={GetNewSkills} />
-					</Col>
-					<Col style={{width: `20%`, alignItems: `flex-start`}}>
+					</ImageCol>
+					<TextCol>
 						<div style={{textAlign: `left`}}>
 							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
 								BE PART OF A COMMUNITY: 
@@ -70,7 +70,7 @@ const ThirdSection = () => (
 								quizzes and award you a Certificate
 							</Text>
 						</div>				
-					</Col>		
+					</TextCol>		
 				</Row>
 			</Col>
 		</Row>
@@ -89,5 +89,24 @@ const Container = glamorous.div({
 })
 
 const GlamorousIphoneScreen = glamorous(IphoneScreen)({
-	minWidth: 450 
+	width: 450,
+	[mediaQueries.small]:{
+		height: 500,
+		width: 350
+	} 
+})
+
+const TextCol = glamorous(Col)({
+	width: `20%`, 
+	alignItems: `flex-start`,
+})
+
+const ImageCol = glamorous(Col)({
+ 	width: `30%`, 
+ 	marginRight: 25, 
+ 	marginLeft: 25,
+ 	[mediaQueries.regular]:{
+ 		marginLeft: 70,
+ 		marginRight: 70
+ 	}
 })

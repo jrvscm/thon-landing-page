@@ -48,6 +48,9 @@ const H1 = glamorous.h1({
 	fontSize: 40,
 	margin: 0,
 	color: white,
-	textAlign: `center`
+	textAlign: `center`,
+	[mediaQueries.small]:{
+		fontSize: 32
+	}
 })
 

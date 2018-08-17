@@ -8,7 +8,7 @@ import Send from '../../assets/images/send.svg';
 import Slack from '../../assets/images/slack.svg';
 import Twitter from '../../assets/images/twitter.svg';
 import { orange, darkRed, lightRed, white } from '../../colors.js';
-import { Row, Col, SubscribeButton } from '../../UIElements';
+import { Row, Col, SubscribeButton, mediaQueries } from '../../UIElements';
 
 const Footer = () => (
 	<Container>
@@ -17,7 +17,7 @@ const Footer = () => (
 				<Logo />
 			</Row>
 		</Col>
-		<Col>
+		<Col style={{minWidth: 315}}>
 			<Row>
 				<Social>
 					<li><SocialButton><img src={Send} /></SocialButton></li>
@@ -31,7 +31,7 @@ const Footer = () => (
 		<Col>
 			<Row>
 				<SubscribeButton>
-					Subscribe
+					SUBSCRIBE
 				</SubscribeButton>
 			</Row>
 		</Col>
@@ -55,12 +55,17 @@ const Container = glamorous.div({
 
 const Logo = glamorous.div({
 	height: 80,
-	width: 300,
-	marginRight: 5,
+	width: 250,
 	backgroundImage: `url(${LogoSvg})`,
 	backgroundSize: `cover`,
 	backgroundPosition: `center center`,
-	backgroundRepeat: `no-repeat`
+	backgroundRepeat: `no-repeat`,
+	[mediaQueries.med]:{
+		width: 200
+	},
+	[mediaQueries.small]:{
+		width: 180
+	}
 })
 
 const H1 = glamorous.h1({
@@ -72,6 +77,10 @@ const H1 = glamorous.h1({
 })
 
 const Social = glamorous.ul({
+	display: `flex`,
+	flexDirection: `row`,
+	alignItems: `center`,
+	justifyContent: `space-between`,
 	listStyleType: `none`,
 	margin: 0,
 	padding: 0,
@@ -89,7 +98,29 @@ const SocialButton = glamorous.button({
 	borderRadius: `50%`,
 	cursor: `pointer`,
 	outline: `none`,
+	height: 50,
+	width: 50,
+	'& img':{
+		height: 50,
+		width: 50
+	},	
 	'&:focus':{
 		outline: `none`
+	}
+},
+[mediaQueries.med]:{
+	height: 38,
+	width: 38,
+	'& img':{
+		height: 38,
+		width: 38
+	}
+},
+[mediaQueries.small]:{
+	height: 40,
+	width: 40,
+	'& img':{
+		height: 40,
+		width: 40
 	}
 })
