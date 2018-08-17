@@ -35,17 +35,19 @@ export const VerticalRow = glamorous(Row)({
 })
 
 export const IphoneScreen = glamorous.img({
-	height: `100%`,
+	minHeight: 600,
+	minWidth: 380,
 	width: `100%`,
-	maxHeight: 550,
-	maxWidth: 330
+	maxWidth: 400,
+	zIndex: 50
+
 })
 
 export const LabelCol = glamorous.div({
 	position: `absolute`, 
 	left: 0,
 	width: 1000,
-	marginLeft: -350,
+	marginLeft: -400,
 	display: `flex`,
 	flexDirection: `column`,
 	alignItems: `center`,
@@ -104,6 +106,7 @@ export const Li = glamorous.li({
 })
 
 export const List = glamorous.ul({
+	marginTop: 0,
 	listStyle: `square outside url(${Bullet})`
 })
 

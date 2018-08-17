@@ -36,11 +36,10 @@ const FourthSection = () => (
 				<Col>
 					<Row>
 						<Col style={{alignItems: `flex-end`, width: `40%`}}>
-							<IphoneScreen src={ShowcaseYourInnovation} />
+							<ShowcaseIphoneScreen src={ShowcaseYourInnovation} />
 						</Col>
 						<Col style={{alignItems: `flex-start`, width: `60%`}}>
-							<div style={{maxWidth: 700}}>
-								<P color={orange} style={{marginBottom: 15}}>FUND YOUR FAVORITE INNOVATION</P>
+							<div style={{maxWidth: 700, marginLeft: 25}}>
 								<Text color={textGrey} style={{marginBottom: 25}}>
 									This is a place to showcase your innovation, protect your idea.
 								</Text>
@@ -71,12 +70,12 @@ const FourthSection = () => (
 					</VerticalRow>
 				</LabelCol>
 				<Col style={{width: `60%`, alignItems: `flex-end`}}>
-					<div style={{maxWidth: 600, textAlign: `right`}}>
+					<div style={{maxWidth: 600, textAlign: `right`, marginRight: 25}}>
 						<Text color={textGrey} style={{marginBottom: 25}}>
 							Create a fundraising hackathon quickly and easily. Start accepting funding in minutes. Share your event 
 							on Facebook, Instagram, WhatsApp,Twitter, email or text message. Get notified each time someone funds.
 						</Text>
-						<Text color={textGrey} style={{marginBottom: 15}}>
+						<Text color={textGrey} style={{marginBottom: 5}}>
 							FOR SUPPORTERS, BACKERS, INVESTORS:							
 						</Text>
 						<Text color={textGrey}>
@@ -85,7 +84,7 @@ const FourthSection = () => (
 					</div>
 				</Col>
 				<Col style={{width: `40%`, alignItems: `flex-start`}}>
-					<IphoneScreen src={BuildYourCommunity} />
+					<CommunityIphoneScreen src={BuildYourCommunity} />
 				</Col>	
 			</Row>
 		</ContentContainer>	
@@ -114,4 +113,12 @@ const ContentContainer = glamorous.div({
 	flexDirection: `column`,
 	alignItems: `center`,
 	justifyContent: `center`
+})
+
+const ShowcaseIphoneScreen = glamorous(IphoneScreen)({
+	minWidth: 380
+})
+
+const CommunityIphoneScreen = glamorous(IphoneScreen)({
+	minWidth: 380
 })

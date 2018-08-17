@@ -45,13 +45,13 @@ const ThirdSection = () => (
 							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
 								LEARN FROM EXPERTS:
 							</Text>
-							<Text color={white} style={{paddingBottom: 25, fontWeight: 300}}>
+							<Text color={white} style={{fontWeight: 300, marginBottom: 65}}>
 								Be inspired by 1000+ mentors, expert instructors. Keep learning even when you're offline.
 							</Text>
 						</div>
 					</Col>
-					<Col style={{width: `20%`}}>
-						<IphoneScreen src={GetNewSkills} />
+					<Col style={{width: `30%`, marginRight: 25, marginLeft: 25}}>
+						<GlamorousIphoneScreen src={GetNewSkills} />
 					</Col>
 					<Col style={{width: `20%`, alignItems: `flex-start`}}>
 						<div style={{textAlign: `left`}}>
@@ -64,7 +64,7 @@ const ThirdSection = () => (
 							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
 								EARN SHAREABLE CERTIFICATES:
 							</Text>
-							<Text color={white} style={{paddingBottom: 25, fontWeight: 300}}>
+							<Text color={white} style={{fontWeight: 300, marginBottom: 65}}>
 								Easily share your achievements with employers, colleagues and friends
 								Thon offers free and paid courses including video lecture and reading materials. Paid courses unlock 
 								quizzes and award you a Certificate
@@ -88,3 +88,6 @@ const Container = glamorous.div({
 	justifyContent: `center`
 })
 
+const GlamorousIphoneScreen = glamorous(IphoneScreen)({
+	minWidth: 450 
+})

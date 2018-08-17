@@ -37,10 +37,10 @@ const SecondSection = () => (
 				<Col>
 					<Row>
 						<Col style={{alignItems: `flex-end`, width: `40%`}}>
-							<IphoneScreen src={GetFunded} />
+							<FundIphoneScreen src={GetFunded} />
 						</Col>
 						<Col style={{alignItems: `flex-start`, width: `60%`}}>
-							<div style={{maxWidth: 700}}>
+							<div style={{maxWidth: 650, marginLeft: 25}}>
 								<P color={orange} style={{marginBottom: 15}}>FUND YOUR FAVORITE INNOVATION</P>
 								<Text color={textGrey} style={{marginBottom: 25}}>
 									#Thon is a place where innovators and passionate backers come together to support ideas
@@ -54,7 +54,7 @@ const SecondSection = () => (
 									<Li><Text color={textGrey}>Share innovative ideas with friends via email, messaging, social media and more</Text></Li>
 								</List>
 								<Text color={textGrey}>Innovators can stay up to date from anywhere:</Text>
-								<List>
+								<List style={{paddingBottom: 25}}>
 									<Li><Text color={textGrey}>Get notified each time you receive funding</Text></Li>
 									<Li><Text color={textGrey}>Keep up with comments and upvotes</Text></Li>
 									<Li><Text color={textGrey}>Post updates and respond to backer messages</Text></Li>
@@ -73,7 +73,7 @@ const SecondSection = () => (
 					</VerticalRow>
 				</LabelCol>
 				<Col style={{width: `60%`, alignItems: `flex-end`}}>
-					<div style={{maxWidth: 700, textAlign: `right`}}>
+					<div style={{maxWidth: 700, textAlign: `right`, marginRight: 25}}>
 						<P color={lightRed} style={{marginBottom: 15}}>UPVOTE</P>
 						<Text color={textGrey} style={{marginBottom: 25}}>
 							When you're logged in to #Thon, you'll be able to upvote items to help determine their rank.
@@ -105,7 +105,7 @@ const SecondSection = () => (
 					</div>
 				</Col>
 				<Col style={{width: `40%`, alignItems: `flex-start`}}>
-					<IphoneScreen src={DiscoverInnovation} />
+					<DiscoverIphoneScreen src={DiscoverInnovation} />
 				</Col>					
 			</Row>
 		</ContentContainer>
@@ -135,4 +135,12 @@ const ContentContainer = glamorous.div({
 	flexDirection: `column`,
 	alignItems: `center`,
 	justifyContent: `center`
+})
+
+const FundIphoneScreen = glamorous(IphoneScreen)({
+	minWidth: 380
+})
+
+const DiscoverIphoneScreen = glamorous(IphoneScreen)({
+	minWidth: 380
 })

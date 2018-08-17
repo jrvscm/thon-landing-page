@@ -34,7 +34,7 @@ const Background = glamorous.div({
 	justifyContent: `center`,
 	height: `100vh`,
 	width: `100vw`,
-	marginTop: `-35vh`,
+	marginTop: `-40vh`,
 	backgroundImage: `url(${HeaderPattern})`,
 	backgroundSize: `cover`,
 	backgroundPosition: `center center`,
@@ -45,7 +45,7 @@ const H1 = glamorous.h1({
 	color: lightRed,
 	fontFamily: 'SF-Pro-Display-Bold',
 	fontWeight: 300,
-	fontSize: 60,
+	fontSize: 40,
 	margin: 0,
 	color: white,
 	textAlign: `center`

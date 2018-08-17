@@ -1,7 +1,7 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
-import LogoSvg from '../../assets/images/logo-white.png';
+import LogoSvg from '../../assets/images/thon-logo-white.svg';
 import Facebook from '../../assets/images/facebook.svg';
 import Instagram from '../../assets/images/instagram.svg';
 import Send from '../../assets/images/send.svg';
@@ -15,7 +15,6 @@ const Footer = () => (
 		<Col>
 			<Row>
 				<Logo />
-				<H1>thon</H1>
 			</Row>
 		</Col>
 		<Col>
@@ -56,7 +55,7 @@ const Container = glamorous.div({
 
 const Logo = glamorous.div({
 	height: 80,
-	width: 80,
+	width: 300,
 	marginRight: 5,
 	backgroundImage: `url(${LogoSvg})`,
 	backgroundSize: `cover`,

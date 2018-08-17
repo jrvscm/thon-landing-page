@@ -2,8 +2,8 @@ import React from 'react';
 import glamorous from 'glamorous';
 import { Textfit } from 'react-textfit';
 
+import SvgIcon from '../../assets/images/thon-logo-red.svg';
 import HeaderPattern from '../../assets/images/header-pattern-cropped.png';
-import LogoSvg from '../../assets/images/logo-light-red.png';
 import StackedIphones from '../../assets/images/stacked-iphones.png';
 import { orange, darkRed, lightRed, white } from '../../colors.js';
 import { mediaQueries, Row, SubscribeButton } from '../../UIElements.js';
@@ -14,8 +14,7 @@ const FirstSection = () => (
 			<GlamorousRow>
 				<Col>
 					<InnerRow>
-						<Logo />
-						<H1>thon</H1>
+						<Logo src={SvgIcon} />
 					</InnerRow>
 					<InnerRow>
 						<P>
@@ -48,7 +47,7 @@ const Container = glamorous.div({
 const Background = glamorous.div({
 	height: `100vh`,
 	width: `100vw`,
-	paddingBottom: `20vh`,
+	paddingBottom: `30vh`,
 	backgroundImage: `url(${HeaderPattern})`,
 	backgroundSize: `cover`,
 	backgroundPosition: `center center`,
@@ -71,14 +70,9 @@ const Col = glamorous.div({
 	justifyContent: `flex-start`
 })
 
-const Logo = glamorous.div({
-	height: 80,
-	width: 80,
-	marginRight: 5,
-	backgroundImage: `url(${LogoSvg})`,
-	backgroundSize: `cover`,
-	backgroundPosition: `center center`,
-	backgroundRepeat: `no-repeat`
+const Logo = glamorous.img({
+	height: 300,
+	width: 300
 })
 
 const H1 = glamorous.h1({
@@ -98,6 +92,7 @@ const P = glamorous.p({
   lineHeight: `normal`,
   letterSpacing: 0.5,
   color: white,
+  marginTop: -80,
   [mediaQueries.large]: {
   	fontSize: 30
   },
@@ -107,7 +102,8 @@ const P = glamorous.p({
 })
 
 const Iphones = glamorous.img({
-	height: `80%`
+	height: `90%`,
+	marginTop: 100
 })
 
 const GlamorousRow = glamorous(Row)({
