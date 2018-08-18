@@ -7,24 +7,49 @@ import LogoSvg from '../../assets/images/logo-light-red.png';
 import { orange, darkRed, lightRed, white } from '../../colors.js';
 import { mediaQueries, Row, Col } from '../../UIElements.js';
 
-const FooterSection = () => (
-	<Container>
-		<Background>
-			<H1>
-				PROTECT YOUR INTELECTUAL PROPERTY<br />
-				ON THE BLOCKCHAIN
-			</H1>
-		</Background>
-		<Footer />
-	</Container>
-)
+const MobileDetect = require('mobile-detect');
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
+const FooterSection = () => {
+	if(!isMobile){
+		return(
+			<Container>
+				<Background>
+					<H1>
+						PROTECT YOUR INTELECTUAL PROPERTY<br />
+						ON THE BLOCKCHAIN
+					</H1>
+				</Background>
+			<Footer />
+		</Container>
+	)
+	} else {
+		return(
+			<Container>
+				<H1>
+					PROTECT YOUR INTELECTUAL<br /> 
+					PROPERTY<br />
+					ON THE BLOCKCHAIN
+				</H1>
+				<Footer />
+			</Container>		
+		)
+	}
+}
 
 export default FooterSection;
 
 const Container = glamorous.div({
 	position: `relative`,
 	height: `100%`,
-	width: `100%`
+	width: `100%`,
+	[mediaQueries.mobile]:{
+		display: `flex`,
+		flexDirection: `column`,
+		alignItems: `center`,
+		justifyContent: `center`
+	}
 })
 
 const Background = glamorous.div({

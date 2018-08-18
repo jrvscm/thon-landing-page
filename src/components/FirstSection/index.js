@@ -5,13 +5,44 @@ import { Textfit } from 'react-textfit';
 import SvgIcon from '../../assets/images/thon-logo-red.svg';
 import HeaderPattern from '../../assets/images/header-pattern-cropped.png';
 import StackedIphones from '../../assets/images/stacked-iphones.png';
+import DiscoverInnovation from '../../assets/images/discover-innovation.png';
 import { orange, darkRed, lightRed, white } from '../../colors.js';
 import { mediaQueries, Row, SubscribeButton } from '../../UIElements.js';
 
-const FirstSection = () => (
-	<Container>
-		<Background>
-			<GlamorousRow>
+const MobileDetect = require('mobile-detect');
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
+const FirstSection = () => {
+	if(!isMobile) {
+	return(	
+		<Container>
+			<Background>
+				<GlamorousRow>
+					<Col>
+						<InnerRow>
+							<Logo src={SvgIcon} />
+						</InnerRow>
+						<InnerRow>
+							<P>
+								GET FUNDED, LEARN, NETWORK<br/> 
+								THE MARKETPLACE OF INNOVATION<br/>
+								AND OPPORTUNITIES FOR HACKATHONS
+							</P>
+						</InnerRow>
+						<InnerRow>
+							<SubscribeButton>SUBSCRIBE</SubscribeButton>
+						</InnerRow>
+					</Col>
+					<Iphones src={StackedIphones} />
+				</GlamorousRow>
+			</Background>
+		</Container>
+	)
+} else {
+	return(
+		<Container>
+			<Background>
 				<Col>
 					<InnerRow>
 						<Logo src={SvgIcon} />
@@ -23,25 +54,23 @@ const FirstSection = () => (
 							AND OPPORTUNITIES FOR HACKATHONS
 						</P>
 					</InnerRow>
-					<InnerRow>
-						<SubscribeButton>SUBSCRIBE</SubscribeButton>
-					</InnerRow>
 				</Col>
-				<Iphones src={StackedIphones} />
-			</GlamorousRow>
-		</Background>
-	</Container>
-)
+				<Iphones src={DiscoverInnovation} />
+			</Background>
+		</Container>			
+		)
+	}
+}
 
 export default FirstSection;
 
 const Container = glamorous.div({
 	height: `100%`,
-	width: `100%`,
+	width: `100vw`,
 	display: `flex`,
 	flexDirection: `column`,
 	alignItems: `center`,
-	justyfContent: `center`
+	justyfContent: `center`,
 })
 
 const Background = glamorous.div({
@@ -51,7 +80,12 @@ const Background = glamorous.div({
 	backgroundImage: `url(${HeaderPattern})`,
 	backgroundSize: `cover`,
 	backgroundPosition: `center center`,
-	backgroundRepeat: `no-repeat`
+	backgroundRepeat: `no-repeat`,
+	[mediaQueries.mobile]:{
+		backgroundSize: `140vw, 100vh`,
+		backgroundPosition: `left top`,
+		paddingBottom: `50vh`
+	}
 })
 
 const InnerRow = glamorous.div({
@@ -59,7 +93,10 @@ const InnerRow = glamorous.div({
 	display: `flex`,
 	flexDirection: `row`,
 	alignItems: `center`,
-	justifyContent: `flex-start`
+	justifyContent: `flex-start`,
+	[mediaQueries.mobile]:{
+		width: `80%`
+	}
 })
 
 const Col = glamorous.div({
@@ -67,7 +104,11 @@ const Col = glamorous.div({
 	display: `flex`,
 	flexDirection: `column`,
 	alignItems: `center`,
-	justifyContent: `flex-start`
+	justifyContent: `flex-start`,
+	[mediaQueries.mobile]:{
+		width: `100%`,
+		justifyContent: `center`
+	}
 })
 
 const Logo = glamorous.img({
@@ -104,7 +145,10 @@ const P = glamorous.p({
   	fontSize: 25
   },
   [mediaQueries.small]:{
-  	fontSize: 20
+  	fontSize: 22
+  },
+  [mediaQueries.mobile]:{
+  	marginTop: -35
   }
 })
 
@@ -119,6 +163,11 @@ const Iphones = glamorous.img({
 	},
 	[mediaQueries.small]:{
 		height: `50%`
+	},
+	[mediaQueries.mobile]:{
+		height: `100%`,
+		width: `100%`,
+		marginTop: 40
 	}
 })
 

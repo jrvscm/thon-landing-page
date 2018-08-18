@@ -10,33 +10,63 @@ import Twitter from '../../assets/images/twitter.svg';
 import { orange, darkRed, lightRed, white } from '../../colors.js';
 import { Row, Col, SubscribeButton, mediaQueries } from '../../UIElements';
 
-const Footer = () => (
-	<Container>
-		<Col>
-			<Row>
-				<Logo />
-			</Row>
-		</Col>
-		<Col style={{minWidth: 315}}>
-			<Row>
-				<Social>
-					<li><SocialButton><img src={Send} /></SocialButton></li>
-					<li><SocialButton><img src={Facebook} /></SocialButton></li>
-					<li><SocialButton><img src={Instagram} /></SocialButton></li>
-					<li><SocialButton><img src={Twitter} /></SocialButton></li>
-					<li><SocialButton><img src={Slack} /></SocialButton></li>
-				</Social>
-			</Row>
-		</Col>
-		<Col>
-			<Row>
-				<SubscribeButton>
-					SUBSCRIBE
-				</SubscribeButton>
-			</Row>
-		</Col>
-	</Container>
-)
+const MobileDetect = require('mobile-detect');
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
+const Footer = () => {
+	if(!isMobile){
+		return(	
+			<Container>
+				<Col>
+					<Row>
+						<Logo />
+					</Row>
+				</Col>
+				<Col style={{minWidth: 315}}>
+					<Row>
+						<Social>
+							<li><SocialButton><img src={Send} /></SocialButton></li>
+							<li><SocialButton><img src={Facebook} /></SocialButton></li>
+							<li><SocialButton><img src={Instagram} /></SocialButton></li>
+							<li><SocialButton><img src={Twitter} /></SocialButton></li>
+							<li><SocialButton><img src={Slack} /></SocialButton></li>
+						</Social>
+					</Row>
+				</Col>
+				<Col>
+					<Row>
+						<SubscribeButton>
+							SUBSCRIBE
+						</SubscribeButton>
+					</Row>
+				</Col>
+			</Container>
+		)
+	} else {
+		return(
+			<Container>
+				<Row>
+					<Logo />
+				</Row>
+				<Row>
+					<Social>
+						<li><SocialButton><img src={Send} /></SocialButton></li>
+						<li><SocialButton><img src={Facebook} /></SocialButton></li>
+						<li><SocialButton><img src={Instagram} /></SocialButton></li>
+						<li><SocialButton><img src={Twitter} /></SocialButton></li>
+						<li><SocialButton><img src={Slack} /></SocialButton></li>
+					</Social>
+				</Row>
+				<Row>
+					<SubscribeButton>
+						SUBSCRIBE
+					</SubscribeButton>
+				</Row>
+			</Container>			
+		)
+	}
+}
 
 export default Footer;
 
@@ -50,7 +80,11 @@ const Container = glamorous.div({
 	display: `flex`,
 	flexDirection: `row`,
 	alignItems: `center`,
-	justifyContent: `space-around`
+	justifyContent: `space-around`,
+	[mediaQueries.mobile]:{
+		height: `auto`,
+		flexDirection: `column`
+	}
 })
 
 const Logo = glamorous.div({
@@ -123,4 +157,12 @@ const SocialButton = glamorous.button({
 		height: 40,
 		width: 40
 	}
+},
+[mediaQueries.mobile]:{
+	height: 30,
+	width: 30,
+	'& img':{
+		height: 30,
+		width: 30
+	}	
 })
