@@ -169,6 +169,7 @@ const Container = glamorous.div({
 })
 
 const ContentContainer = glamorous.div({
+	width: `100vw`,
 	backgroundImage: `url(${CurveBackgroundTwo})`,
 	backgroundSize: `cover`,
 	backgroundPosition: `center center`,
