@@ -12,13 +12,15 @@ const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
 const Popup = ({hidden, toggler}) => {
+	console.log(isMobile)
 	if(hidden === true) {
 		return(
 			null
 		)
 	} else {
 		return(
-			<Container>
+		<OuterLayer isMobile={isMobile}>
+			<Container isMobile={isMobile}>
 				<Wrapper>
 					<LogoCol isMobile={isMobile}>
 						<Sizer>
@@ -46,13 +48,13 @@ const Popup = ({hidden, toggler}) => {
 							>
 								THE WAY TO CHANGE<br />THE WORLD OF STARTUPS
 							</FormTitle>
-							<form autocomplete="off">
+							<form autoComplete="off">
 								<label htmlFor="email" />
 								<CustomInput 
 									isMobile={isMobile}
 									name="email" 
 									type="email" 
-									autocomplete="off"
+									autoComplete="off"
 								/>
 							</form>
 							<Row>
@@ -65,6 +67,7 @@ const Popup = ({hidden, toggler}) => {
 					</FormCol>
 				</Wrapper>
 			</Container>
+		</OuterLayer>
 		)
 	}
 }
@@ -73,20 +76,29 @@ export default Popup;
 
 const Container = glamorous.div({
 	position: `fixed`,
-	top: 0,
-	right: 0,
-	left: 0,
-	bottom: 0,
 	backgroundImage: `linear-gradient(to left, #ff9c00, #8f1e2f)`,
 	zIndex: 100,
 	display: `flex`,
 	flexDirection: `column`,
 	alignItems: `center`,
 	justifyContent: `center`,
+}, ({isMobile}) => ({
+		top: !isMobile ? `10%` : 0, 
+		left: !isMobile ? `15%` : 0, 
+		right: !isMobile ? `15%` : 0, 
+		bottom: !isMobile ? `10%` : 0, 			
+}))
+
+const OuterLayer = glamorous.div({
+	position: `fixed`,
+	height: `100vh`,
+	width: `100vw`,
+	zIndex: 150,
+	backgroundColor: `rgba(0,0,0,.9)`,
 })
 
 const Wrapper = glamorous.div({
-	position: `fixed`,
+	position: `absolute`,
 	top: 0,
 	right: 0,
 	left: 0,
@@ -111,12 +123,10 @@ const Logo = glamorous.img({
 })
 
 const FormCol = glamorous(Col)({
-	position: `relative`,
 	boxSizing: `border-box`,
 	backgroundColor: white, 
-	height: `100vh`,
-	width: `30%`,
-	minWidth: 350,
+	height: `100%`,
+	width: `35%`,
 	paddingRight: 30,
 	paddingLeft: 30,
 	border: `2px solid ${lightRed}`,
@@ -124,12 +134,12 @@ const FormCol = glamorous(Col)({
 	flexDirection: `column`,
 	alignItems: `center`,
 	justifyContent: `center`,
+	[mediaQueries.small]:{
+		width: `45%`
+	}
 }, ({isMobile}) => ({
 	width: !isMobile ? null : `100%`,
-	minWidth: !isMobile ? null : `100%`,
-	'&::-webkit-scrollbar':{
-		display: `none`
-	}
+	minWidth: !isMobile ? null : `100%`
 }))
 
 const Sizer = glamorous.div({
@@ -175,7 +185,7 @@ const LogoCol = glamorous(Col)({
 }))
 
 const CustomSubscribe = glamorous(SubscribeButton)({
-	width: `95%`,
+	width: `95% !important`,
 }, ({isMobile}) => ({
 	marginTop: !isMobile ? null : `0 !important`
 }))
@@ -191,6 +201,6 @@ const FormTitle = glamorous(P)({
 const Terms = glamorous.p({
 	fontSize: 12,
 	color: lightRed,
-	position: `fixed`,
+	position: `absolute`,
 	bottom: 0
 })
