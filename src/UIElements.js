@@ -151,6 +151,8 @@ export const SubscribeButton = glamorous.button({
 	fontStretch: `normal`,
 	fontHeight: `normal`,
 	letterSpacing: 0.5,
+	cursor: `pointer`,
+	outline: `none`,
 	[mediaQueries.med]:{
 		height: 65,
 		width: 268,

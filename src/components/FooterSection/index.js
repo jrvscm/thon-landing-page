@@ -11,7 +11,7 @@ const MobileDetect = require('mobile-detect');
 const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
-const FooterSection = () => {
+const FooterSection = ({toggler}) => {
 	if(!isMobile || isMobile === `iPad`) {
 		return(
 			<Container>
@@ -22,7 +22,7 @@ const FooterSection = () => {
 						ON THE BLOCKCHAIN
 					</H1>
 				</Background>
-			<Footer />
+			<Footer toggler={toggler} />
 		</Container>
 	)
 	} else {
@@ -34,7 +34,7 @@ const FooterSection = () => {
 					PROPERTY<br />
 					ON THE BLOCKCHAIN
 				</H1>
-				<Footer />
+				<Footer toggler={toggler}/>
 			</Container>		
 		)
 	}

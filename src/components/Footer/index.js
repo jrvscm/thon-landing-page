@@ -14,7 +14,7 @@ const MobileDetect = require('mobile-detect');
 const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
-const Footer = () => {
+const Footer = ({toggler}) => {
 	if(!isMobile || isMobile === `iPad`) {
 		return(	
 			<Container>
@@ -36,7 +36,7 @@ const Footer = () => {
 				</Col>
 				<Col>
 					<Row>
-						<SubscribeButton>
+						<SubscribeButton onClick={() => toggler()}>
 							SUBSCRIBE
 						</SubscribeButton>
 					</Row>
@@ -59,7 +59,7 @@ const Footer = () => {
 					</Social>
 				</Row>
 				<Row>
-					<FooterSubscribeButton>
+					<FooterSubscribeButton onClick={() => toggler()}>
 						SUBSCRIBE
 					</FooterSubscribeButton>
 				</Row>

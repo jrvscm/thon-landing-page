@@ -34,7 +34,7 @@ const MobileDetect = require('mobile-detect');
 const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
-const SecondSection = () => {
+const SecondSection = ({toggler}) => {
 	if(!isMobile || isMobile === `iPad`) {
 		return(
 			<Container>
@@ -129,7 +129,7 @@ const SecondSection = () => {
 			<Container>
 				<ContentContainer>
 					<Row style={{paddingBottom: 40}}>
-						<SubscribeButton>SUBSCRIBE</SubscribeButton>
+						<SubscribeButton onClick={() => toggler()}>SUBSCRIBE</SubscribeButton>
 					</Row>
 					<LargeSlash path={LargeOrangeSlash}>
 						<P 
