@@ -83,7 +83,7 @@ export const P = glamorous.p({
 export const HR = glamorous.hr({
 	marginTop: 100,
 	marginBottom: 100,
-  width: `80%`,
+  width: `70%`,
   height: 0,
 }, ({color}) => ({
   border: `solid .5px ${color}`

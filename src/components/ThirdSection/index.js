@@ -1,7 +1,7 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
-import CurvImage from '../../assets/images/curve-top-border-two.png';
+import CurveImage from '../../assets/images/curve-top-border-two.png';
 import RedSlashes from '../../assets/images/red-slashes.png';
 import GetNewSkills from '../../assets/images/get-new-skills-arrows.png';
 import WhiteSlashes from '../../assets/images/white-slashes.png';
@@ -83,6 +83,7 @@ const ThirdSection = () => {
 				</Row>
 			</Col>
 		</Row>
+		<SectionBorder src={CurveImage} />
 	</Container>
 )} else {
 	return(
@@ -134,6 +135,7 @@ const ThirdSection = () => {
 						</div>				
 					</TextCol>		
 				</Row>
+				<SectionBorder src={CurveImage} />
 			</Container>
 		)
 	}
@@ -142,13 +144,15 @@ const ThirdSection = () => {
 export default ThirdSection;
 
 const Container = glamorous.div({
+	position: `relative`,
 	width: `100vw`,
 	backgroundColor: `transparent`,
 	display: `flex`,
 	flexDirection: `column`,
 	alignItems: `center`,
 	justifyContent: `center`,
-	marginTop: `20vh`
+	marginTop: `20vh`,
+	paddingBottom: `20vh`
 })
 
 const GlamorousIphoneScreen = glamorous(IphoneScreen)({

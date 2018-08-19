@@ -1,14 +1,15 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
+import CurveImage from '../../assets/images/curve-top-border-two.png';
 import BuildYourCommunity from '../../assets/images/build-your-community.png';
 import BuildYourCommunitySingle from '../../assets/images/build-your-community-single.png';
 import ShowcaseYourInnovation from '../../assets/images/showcase-your-innovation.png';
 import ShowcaseYourInnovationSingle from '../../assets/images/showcase-your-innovation-single.png';
 import OrangeSlashes from '../../assets/images/orange-slashes.png'; 
 import RedSlashes from '../../assets/images/red-slashes.png'; 
-import CurveBackgroundTwo from '../../assets/images/curve-background-two.png';
 import {
+	SectionBorder,
 	mediaQueries, 
 	Background, 
 	Row, 

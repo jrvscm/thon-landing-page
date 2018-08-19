@@ -3,7 +3,6 @@ import glamorous from 'glamorous';
 import { Textfit } from 'react-textfit';
 
 import CurveImage from  '../../assets/images/curve-top-border-one.png';
-import BottomCurveImage from '../../assets/images/curve-bottom-border-one.png';
 import SvgIcon from '../../assets/images/thon-logo-red.svg';
 import HeaderPattern from '../../assets/images/header-pattern-cropped.png';
 import StackedIphones from '../../assets/images/stacked-iphones.png';
