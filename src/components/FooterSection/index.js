@@ -4,7 +4,6 @@ import glamorous from 'glamorous';
 import Footer from '../Footer';
 import CurveImage from '../../assets/images/curve-bottom-border-two.png';
 import HeaderPattern from '../../assets/images/header-pattern-cropped.png';
-import LogoSvg from '../../assets/images/logo-light-red.png';
 import { orange, darkRed, lightRed, white } from '../../colors.js';
 import { mediaQueries, Row, Col, SectionBorder } from '../../UIElements.js';
 
@@ -85,6 +84,5 @@ const H1 = glamorous.h1({
 
 
 const CustomBorder = glamorous(SectionBorder)({
-	top: 0,
-	
+	top: 0
 })

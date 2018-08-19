@@ -20,17 +20,17 @@ const Footer = () => {
 			<Container>
 				<Col>
 					<Row>
-						<Logo />
+						<Logo src={LogoSvg} />
 					</Row>
 				</Col>
 				<Col style={{minWidth: 315}}>
 					<Row>
 						<Social>
-							<li><SocialButton><img src={Send} /></SocialButton></li>
-							<li><SocialButton><img src={Facebook} /></SocialButton></li>
-							<li><SocialButton><img src={Instagram} /></SocialButton></li>
-							<li><SocialButton><img src={Twitter} /></SocialButton></li>
-							<li><SocialButton><img src={Slack} /></SocialButton></li>
+							<li><SocialButton src={Send} /></li>
+							<li><SocialButton src={Facebook} /></li>
+							<li><SocialButton src={Instagram} /></li>
+							<li><SocialButton src={Twitter} /></li>
+							<li><SocialButton src={Slack} /></li>
 						</Social>
 					</Row>
 				</Col>
@@ -47,21 +47,21 @@ const Footer = () => {
 		return(
 			<Container>
 				<Row>
-					<Logo />
+					<Logo src={LogoSvg} />
 				</Row>
 				<Row>
 					<Social>
-						<li><SocialButton><img src={Send} /></SocialButton></li>
-						<li><SocialButton><img src={Facebook} /></SocialButton></li>
-						<li><SocialButton><img src={Instagram} /></SocialButton></li>
-						<li><SocialButton><img src={Twitter} /></SocialButton></li>
-						<li><SocialButton><img src={Slack} /></SocialButton></li>
+						<li><SocialButton role={`button`} src={Send} /></li>
+						<li><SocialButton role={`button`} src={Facebook} /></li>
+						<li><SocialButton role={`button`} src={Instagram} /></li>
+						<li><SocialButton role={`button`} src={Twitter} /></li>
+						<li><SocialButton role={`button`} src={Slack} /></li>
 					</Social>
 				</Row>
 				<Row>
-					<SubscribeButton>
+					<FooterSubscribeButton>
 						SUBSCRIBE
-					</SubscribeButton>
+					</FooterSubscribeButton>
 				</Row>
 			</Container>			
 		)
@@ -75,7 +75,7 @@ const Container = glamorous.div({
 	bottom: 0,
 	left: 0, 
 	right: 0,
-	height: 146,
+	height: `auto`,
 	backgroundColor: orange,
 	display: `flex`,
 	flexDirection: `row`,
@@ -87,19 +87,12 @@ const Container = glamorous.div({
 	}
 })
 
-const Logo = glamorous.div({
-	height: 80,
-	width: 250,
-	backgroundImage: `url(${LogoSvg})`,
-	backgroundSize: `cover`,
-	backgroundPosition: `center center`,
-	backgroundRepeat: `no-repeat`,
-	[mediaQueries.med]:{
-		width: 200
-	},
-	[mediaQueries.small]:{
-		width: 180
-	}
+const Logo = glamorous.img({
+	height: 75,
+	[mediaQueries.mobile]:{
+		marginTop: 30,
+		height: 50
+	}	
 })
 
 const H1 = glamorous.h1({
@@ -116,53 +109,37 @@ const Social = glamorous.ul({
 	alignItems: `center`,
 	justifyContent: `space-between`,
 	listStyleType: `none`,
-	margin: 0,
+	marginRight: `10%`,
+	marginLeft: `10%`,
+	marginTop: 30,
+	marginBottom: 30,
 	padding: 0,
 	width: `100%`,
 	textAlign: `center`,
 	'& li':{
-		display: `inline`,
-		margin: `2%`
+		display: `inline`
 	}
 })
 
-const SocialButton = glamorous.button({
+const SocialButton = glamorous.img({
 	backgroundColor: `transparent`,
 	border: `none`,
 	borderRadius: `50%`,
 	cursor: `pointer`,
 	outline: `none`,
 	height: 50,
-	width: 50,
-	'& img':{
-		height: 50,
-		width: 50
-	},	
-	'&:focus':{
-		outline: `none`
-	}
-},
-[mediaQueries.med]:{
-	height: 38,
-	width: 38,
-	'& img':{
-		height: 38,
-		width: 38
-	}
-},
-[mediaQueries.small]:{
-	height: 40,
-	width: 40,
-	'& img':{
+	width: 50,	
+	[mediaQueries.med]:{
 		height: 40,
 		width: 40
-	}
-},
-[mediaQueries.mobile]:{
-	height: 30,
-	width: 30,
-	'& img':{
+	},
+	[mediaQueries.mobile]:{
 		height: 30,
 		width: 30
-	}	
+	}
+})
+
+const FooterSubscribeButton = glamorous(SubscribeButton)({
+	minWidth: `80vw`,
+	marginBottom: 30
 })

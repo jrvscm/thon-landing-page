@@ -116,11 +116,10 @@ const Col = glamorous.div({
 })
 
 const Logo = glamorous.img({
-	height: 300,
-	width: 300,
-	[mediaQueries.small]:{
-		height: 250,
-		width: 250
+	height: 75,
+	[mediaQueries.mobile]:{
+		marginTop: 75,
+		marginBottom: 40
 	}
 })
 
@@ -133,6 +132,8 @@ const H1 = glamorous.h1({
 })
 
 const P = glamorous.p({
+	margin: 0,
+	padding: 0,
 	fontSize: 40,
 	fontFamily: 'SF-Pro-Text-Light',
 	fontWeight: 400,
@@ -141,7 +142,6 @@ const P = glamorous.p({
   lineHeight: `normal`,
   letterSpacing: 0.5,
   color: white,
-  marginTop: -80,
   [mediaQueries.regular]: {
   	fontSize: 30
   },
@@ -150,9 +150,6 @@ const P = glamorous.p({
   },
   [mediaQueries.small]:{
   	fontSize: 22
-  },
-  [mediaQueries.mobile]:{
-  	marginTop: -35
   }
 })
 
