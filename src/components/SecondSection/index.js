@@ -1,7 +1,7 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
-import CurveBackgroundOne from '../../assets/images/curve-background-one.png';
+import CurveImage from '../../assets/images/curve-bottom-border-one.png';
 import GetFunded from '../../assets/images/get-funded-arrows.png';
 import GetFundedSingle from '../../assets/images/get-funded.png';
 import DiscoverInnovation from '../../assets/images/discover-innovation-arrows.png';
@@ -10,6 +10,7 @@ import OrangeSlashes from '../../assets/images/orange-slashes.png';
 import RedSlashes from '../../assets/images/red-slashes.png';
 import { orange, darkRed, lightRed, white, textGrey } from '../../colors.js';
 import { 
+	SectionBorder,
 	SubscribeButton,
 	Background,
 	mediaQueries, 
@@ -117,6 +118,7 @@ const SecondSection = () => {
 						</Col>					
 					</Row>
 				</ContentContainer>
+				<CustomBorder src={CurveImage} />	
 			</Container>
 		)
 	} else {
@@ -188,6 +190,7 @@ const SecondSection = () => {
 						<DiscoverIphoneScreen src={DiscoverInnovationSingle} />		
 					</Row>									
 				</ContentContainer>
+				<CustomBorder src={CurveImage} />	
 			</Container>
 		)
 	}
@@ -199,7 +202,6 @@ const Container = glamorous.div({
 	position: 'relative',
 	height: `100%`,
 	width: `100vw`,
-	marginTop: `-28vh`,
 	backgroundColor: `transparent`,
 	display: `flex`,
 	flexDirection: `column`,
@@ -209,16 +211,11 @@ const Container = glamorous.div({
 
 const ContentContainer = glamorous.div({
 	width: `100vw`,
-	backgroundImage: `url(${CurveBackgroundOne})`,
-	backgroundSize: `cover`,
-	backgroundPosition: `center center`,
-	backgroundRepeat: `no-repeat`,
 	display: `flex`,
 	flexDirection: `column`,
 	alignItems: `center`,
 	justifyContent: `center`,
-	paddingTop: 200,
-	paddingBottom: 300
+	backgroundColor: white
 })
 
 const FundIphoneScreen = glamorous(IphoneScreen)({
@@ -282,4 +279,8 @@ const SizerTwo=glamorous.div({
 		textAlign: `left`,
 		padding: `5%`
 	}
+})
+
+const CustomBorder = glamorous(SectionBorder)({
+	bottom: `-20vh`
 })

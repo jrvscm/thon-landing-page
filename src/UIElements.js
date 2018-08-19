@@ -137,20 +137,6 @@ export const List = glamorous.ul({
 	listStyle: `square outside url(${Bullet})`
 })
 
-export const Background = glamorous.img({
-	height: `100%`,
-	width: `100%`,
-	[mediaQueries.regular]:{
-		width: `130%`
-	},
-	[mediaQueries.med]:{
-		width: `140%`
-	},
-	[mediaQueries.small]:{
-		width: `170%`
-	}
-})
-
 export const SubscribeButton = glamorous.button({
 	height: 70,
 	width: 300,
@@ -175,4 +161,13 @@ export const SubscribeButton = glamorous.button({
 		width: 200,
 		fontSize: 20
 	}
+})
+
+export const SectionBorder = glamorous.img({
+	height: `20vh`,
+	width: `100vw`,
+	position: `absolute`,
+	bottom: 0,
+	left: 0,
+	right: 0,
 })

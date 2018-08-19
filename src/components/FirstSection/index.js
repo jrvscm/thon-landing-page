@@ -2,12 +2,14 @@ import React from 'react';
 import glamorous from 'glamorous';
 import { Textfit } from 'react-textfit';
 
+import CurveImage from  '../../assets/images/curve-top-border-one.png';
+import BottomCurveImage from '../../assets/images/curve-bottom-border-one.png';
 import SvgIcon from '../../assets/images/thon-logo-red.svg';
 import HeaderPattern from '../../assets/images/header-pattern-cropped.png';
 import StackedIphones from '../../assets/images/stacked-iphones.png';
 import DiscoverInnovation from '../../assets/images/discover-innovation.png';
 import { orange, darkRed, lightRed, white } from '../../colors.js';
-import { mediaQueries, Row, SubscribeButton } from '../../UIElements.js';
+import { mediaQueries, Row, SubscribeButton, SectionBorder } from '../../UIElements.js';
 
 const MobileDetect = require('mobile-detect');
 const md = new MobileDetect(window.navigator.userAgent);
@@ -36,7 +38,8 @@ const FirstSection = () => {
 					</Col>
 					<Iphones src={StackedIphones} />
 				</GlamorousRow>
-			</Background>
+				<SectionBorder src={CurveImage} />	
+			</Background>	
 		</Container>
 	)
 } else {
@@ -56,6 +59,7 @@ const FirstSection = () => {
 					</InnerRow>
 				</Col>
 				<Iphones src={DiscoverInnovation} />
+				<SectionBorder src={CurveImage} />
 			</Background>
 		</Container>			
 		)
@@ -64,8 +68,8 @@ const FirstSection = () => {
 
 export default FirstSection;
 
-const Container = glamorous.div({
-	height: `100%`,
+const Container = glamorous.div({	
+	minHeight: `100vh`,
 	width: `100vw`,
 	display: `flex`,
 	flexDirection: `column`,
@@ -74,9 +78,10 @@ const Container = glamorous.div({
 })
 
 const Background = glamorous.div({
+	position: `relative`, 
 	height: `100vh`,
 	width: `100vw`,
-	paddingBottom: `30vh`,
+	paddingBottom: `20vh`,
 	backgroundImage: `url(${HeaderPattern})`,
 	backgroundSize: `cover`,
 	backgroundPosition: `center center`,
@@ -84,7 +89,7 @@ const Background = glamorous.div({
 	[mediaQueries.mobile]:{
 		backgroundSize: `140vw, 100vh`,
 		backgroundPosition: `left top`,
-		paddingBottom: `50vh`
+		paddingBottom: `40vh`,
 	}
 })
 
@@ -174,3 +179,4 @@ const Iphones = glamorous.img({
 const GlamorousRow = glamorous(Row)({
 	height: `100%`
 })
+

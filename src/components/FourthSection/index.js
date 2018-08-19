@@ -24,7 +24,7 @@ import {
 	HR, 
 } from '../../UIElements';
 
-import { orange, textGrey, lightRed } from '../../colors.js';
+import { orange, textGrey, lightRed, white } from '../../colors.js';
 
 const MobileDetect = require('mobile-detect');
 const md = new MobileDetect(window.navigator.userAgent);
@@ -170,16 +170,11 @@ const Container = glamorous.div({
 
 const ContentContainer = glamorous.div({
 	width: `100vw`,
-	backgroundImage: `url(${CurveBackgroundTwo})`,
-	backgroundSize: `cover`,
-	backgroundPosition: `center center`,
-	backgroundRepeat: `no-repeat`,
 	display: `flex`,
 	flexDirection: `column`,
 	alignItems: `center`,
 	justifyContent: `center`,
-	paddingTop: 200,
-	paddingBottom: 500
+	backgroundColor: white
 })
 
 const ShowcaseIphoneScreen = glamorous(IphoneScreen)({

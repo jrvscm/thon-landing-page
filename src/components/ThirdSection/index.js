@@ -1,12 +1,14 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
+import CurvImage from '../../assets/images/curve-top-border-two.png';
 import RedSlashes from '../../assets/images/red-slashes.png';
 import GetNewSkills from '../../assets/images/get-new-skills-arrows.png';
 import WhiteSlashes from '../../assets/images/white-slashes.png';
 import GetNewSkillsSingle from '../../assets/images/get-new-skills.png';
 import { white } from '../../colors.js';
 import { 
+	SectionBorder,
 	mediaQueries, 
 	Row, 
 	Col, 
@@ -81,11 +83,11 @@ const ThirdSection = () => {
 				</Row>
 			</Col>
 		</Row>
+		<SectionBorder src={CurvImage} />
 	</Container>
 )} else {
 	return(
 	<Container>
-
 				<Row>
 					<TextCol>
 						<div>
@@ -133,6 +135,7 @@ const ThirdSection = () => {
 						</div>				
 					</TextCol>		
 				</Row>
+				<SectionBorder src={CurvImage} />	
 			</Container>
 		)
 	}
@@ -146,7 +149,8 @@ const Container = glamorous.div({
 	display: `flex`,
 	flexDirection: `column`,
 	alignItems: `center`,
-	justifyContent: `center`
+	justifyContent: `center`,
+	marginTop: `20vh`
 })
 
 const GlamorousIphoneScreen = glamorous(IphoneScreen)({
