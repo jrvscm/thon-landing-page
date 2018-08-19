@@ -83,7 +83,6 @@ const ThirdSection = () => {
 				</Row>
 			</Col>
 		</Row>
-		<SectionBorder src={CurvImage} />
 	</Container>
 )} else {
 	return(
@@ -135,7 +134,6 @@ const ThirdSection = () => {
 						</div>				
 					</TextCol>		
 				</Row>
-				<SectionBorder src={CurvImage} />	
 			</Container>
 		)
 	}
