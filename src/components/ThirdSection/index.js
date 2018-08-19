@@ -1,13 +1,15 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
+import LargeWhiteSlash from '../../assets/images/large-white-slashes.svg';
 import CurveImage from '../../assets/images/curve-top-border-two.png';
 import RedSlashes from '../../assets/images/red-slashes.png';
 import GetNewSkills from '../../assets/images/get-new-skills-arrows.png';
 import WhiteSlashes from '../../assets/images/white-slashes.png';
 import GetNewSkillsSingle from '../../assets/images/get-new-skills.png';
 import { white } from '../../colors.js';
-import { 
+import {
+	LargeSlash, 
 	SectionBorder,
 	mediaQueries, 
 	Row, 
@@ -87,8 +89,17 @@ const ThirdSection = () => {
 	</Container>
 )} else {
 	return(
-	<Container>
-				<Row>
+			<Container>
+				<LargeSlash path={LargeWhiteSlash}>
+					<P 
+						style={{
+							color: white, 
+							marginTop: 25, 
+							marginLeft: 40
+						}}
+					>GET NEW<br />SKILLS</P>
+				</LargeSlash>	
+				<Row style={{marginTop: -100}}>
 					<TextCol>
 						<div>
 							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
@@ -151,8 +162,8 @@ const Container = glamorous.div({
 	flexDirection: `column`,
 	alignItems: `center`,
 	justifyContent: `center`,
-	marginTop: `20vh`,
-	paddingBottom: `20vh`
+	marginTop: `30vh`,
+	paddingBottom: `30vh`
 })
 
 const GlamorousIphoneScreen = glamorous(IphoneScreen)({
@@ -172,7 +183,8 @@ const TextCol = glamorous(Col)({
 	width: `20%`, 
 	alignItems: `flex-start`,
 	[mediaQueries.mobile]:{
-		width: `80%`
+		width: `100%`,
+		padding: 40
 	}
 })
 

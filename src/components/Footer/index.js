@@ -140,6 +140,6 @@ const SocialButton = glamorous.img({
 })
 
 const FooterSubscribeButton = glamorous(SubscribeButton)({
-	minWidth: `80vw`,
+	minWidth: `75vw`,
 	marginBottom: 30
 })

@@ -160,6 +160,10 @@ export const SubscribeButton = glamorous.button({
 		height: 60,
 		width: 200,
 		fontSize: 20
+	},
+	[mediaQueries.mobile]:{
+		width: `75vw`,
+		marginTop: 25
 	}
 })
 
@@ -171,3 +175,19 @@ export const SectionBorder = glamorous.img({
 	left: 0,
 	right: 0,
 })
+
+export const LargeSlash = glamorous(Row)({
+	display: `flex`,
+	flexDirection: `row`,
+	alignItems: `flex-start`,
+	justifyContent: `flex-start`,
+	backgroundSize: `contain`,
+	backgroundPosition: `-1vw 0`,
+	backgroundRepeat: `no-repeat`,
+	height: `200`,
+	width: `100%`,
+	paddingRight: 40,
+	paddingLeft: 40,
+}, ({path}) => ({
+	backgroundImage: `url(${path})`,
+}))

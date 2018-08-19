@@ -1,6 +1,8 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
+import LargeOrangeSlash from '../../assets/images/large-orange-slashes.svg';
+import LargeRedSlash from '../../assets/images/large-red-slashes.svg';
 import CurveImage from '../../assets/images/curve-top-border-two.png';
 import BuildYourCommunity from '../../assets/images/build-your-community.png';
 import BuildYourCommunitySingle from '../../assets/images/build-your-community-single.png';
@@ -9,6 +11,7 @@ import ShowcaseYourInnovationSingle from '../../assets/images/showcase-your-inno
 import OrangeSlashes from '../../assets/images/orange-slashes.png'; 
 import RedSlashes from '../../assets/images/red-slashes.png'; 
 import {
+	LargeSlash,
 	SectionBorder,
 	mediaQueries, 
 	Background, 
@@ -103,7 +106,16 @@ const FourthSection = () => {
 		return(
 				<Container>
 					<ContentContainer>
-						<Row>
+						<LargeSlash path={LargeOrangeSlash}>
+							<P 
+								style={{
+									color: orange, 
+									marginTop: 25, 
+									marginLeft: 40
+								}}
+							>SHOWCASE YOUR<br />INNOVATION</P>
+						</LargeSlash>					
+						<Row style={{marginTop: -100}}>
 							<SizerOne>
 								<Text color={textGrey} style={{marginBottom: 25}}>
 									This is a place to showcase your innovation, protect your idea.
@@ -131,7 +143,16 @@ const FourthSection = () => {
 							</SizerOne>
 						</Row>
 					<HR color={textGrey} />
-					<Row>
+					<LargeSlash path={LargeRedSlash}>
+						<P 
+							style={{
+								color: lightRed, 
+								marginTop: 25, 
+								marginLeft: 40
+							}}
+						>BUILD YOUR<br />COMMUNITY</P>
+					</LargeSlash>						
+					<Row style={{marginTop: -100}}>
 						<SizerTwo>
 							<Text color={textGrey} style={{marginBottom: 25}}>
 								Create a fundraising hackathon quickly and easily. Start accepting funding in minutes. Share your event 
@@ -224,7 +245,7 @@ const SizerOne = glamorous.div({
 	[mediaQueries.mobile]:{
 		textAlign: `left`,
 		marginLeft: 0,
-		padding: `5%`
+		padding: 40
 	}
 })
 
@@ -241,6 +262,6 @@ const SizerTwo = glamorous.div({
 	[mediaQueries.mobile]:{
 		textAlign: `left`,
 		marginRight: 0,
-		padding: `5%`
+		padding: 40
 	}
 })

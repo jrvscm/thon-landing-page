@@ -1,6 +1,8 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
+import LargeOrangeSlash from '../../assets/images/large-orange-slashes.svg';
+import LargeRedSlash from '../../assets/images/large-red-slashes.svg';
 import CurveImage from '../../assets/images/curve-bottom-border-one.png';
 import GetFunded from '../../assets/images/get-funded-arrows.png';
 import GetFundedSingle from '../../assets/images/get-funded.png';
@@ -10,6 +12,7 @@ import OrangeSlashes from '../../assets/images/orange-slashes.png';
 import RedSlashes from '../../assets/images/red-slashes.png';
 import { orange, darkRed, lightRed, white, textGrey } from '../../colors.js';
 import { 
+	LargeSlash,
 	SectionBorder,
 	SubscribeButton,
 	Background,
@@ -128,9 +131,18 @@ const SecondSection = () => {
 					<Row style={{paddingBottom: 40}}>
 						<SubscribeButton>SUBSCRIBE</SubscribeButton>
 					</Row>
-					<Row>	
+					<LargeSlash path={LargeOrangeSlash}>
+						<P 
+							style={{
+								color: orange, 
+								marginTop: 25, 
+								marginLeft: 40
+							}}
+						>GET FUNDED</P>
+					</LargeSlash>
+					<Row style={{marginTop: -130}}>	
 						<Sizer>
-							<P color={orange} style={{marginBottom: 15}}>FUND YOUR FAVORITE INNOVATION</P>
+							<P color={orange} style={{marginBottom: 15, fontSize: 16}}>FUND YOUR<br />FAVORITE INNOVATION</P>
 							<Text color={textGrey} style={{marginBottom: 25}}>
 								#Thon is a place where innovators and passionate backers come together to support ideas
 								born at hackathons. Explore and Follow innovative apps, websites, products and more, and
@@ -154,9 +166,18 @@ const SecondSection = () => {
 						<FundIphoneScreen src={GetFundedSingle} />
 					</Row>
 					<HR color={textGrey} />	
-					<Row>
+					<LargeSlash path={LargeRedSlash}>
+						<P 
+							style={{
+								color: lightRed, 
+								marginTop: 25, 
+								marginLeft: 40
+							}}
+						>DISCOVER<br />INNOVATION</P>
+					</LargeSlash>				
+					<Row style={{marginTop: -100}}>
 						<SizerTwo>
-							<P color={lightRed} style={{marginBottom: 15}}>UPVOTE</P>
+							<P color={lightRed} style={{marginBottom: 15, fontSize: 16}}>UPVOTE</P>
 							<Text color={textGrey} style={{marginBottom: 25}}>
 								When you're logged in to #Thon, you'll be able to upvote items to help determine their rank.
 								You get one vote per item, but you can change it after it's logged. The number appearing at
@@ -175,7 +196,7 @@ const SecondSection = () => {
 								of Privilege you have. So the more Privilege you have, the more of the daily rewards pool you can
 								direct to ideas you like!
 							</Text>
-							<P color={lightRed} style={{marginBottom: 15}}>DISCOVER</P>
+							<P color={lightRed} style={{marginBottom: 15, fontSize: 16}}>DISCOVER</P>
 							<Text color={textGrey} style={{marginBottom: 25}}>
 								Discover your next favorite innovation app, website, product. We showcase the best new products
 								and apps every day.
@@ -257,7 +278,7 @@ const Sizer = glamorous.div({
 	},
 	[mediaQueries.mobile]:{
 		marginLeft: 0,
-		padding: `5%`	
+		padding: 40	
 	}
 })
 
@@ -277,7 +298,7 @@ const SizerTwo=glamorous.div({
 	},
 	[mediaQueries.mobile]:{
 		textAlign: `left`,
-		padding: `5%`
+		padding: 40
 	}
 })
 
