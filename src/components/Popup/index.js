@@ -185,7 +185,7 @@ const FormTitle = glamorous(P)({
 	fontWeight: 300,
 }, ({isMobile}) => ({
 	textAlign: !isMobile ? null : `center`,
-	marginBottom: `80`
+	marginBottom: !isMobile ? null : `80`
 }))
 
 const Terms = glamorous.p({
