@@ -29,7 +29,7 @@ const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
 const ThirdSection = () => {
-	if(!isMobile){
+	if(!isMobile || isMobile === `iPad`) {
 	return(
 	<Container>
 		<Row>

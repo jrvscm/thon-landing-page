@@ -12,7 +12,7 @@ const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
 const FooterSection = () => {
-	if(!isMobile){
+	if(!isMobile || isMobile === `iPad`) {
 		return(
 			<Container>
 				<CustomBorder src={CurveImage} />
@@ -79,10 +79,13 @@ const H1 = glamorous.h1({
 	[mediaQueries.small]:{
 		fontSize: 32,
 		marginBottom: `15vh`
+	},
+	[mediaQueries.mobile]:{
+		fontSize: 22
 	}
 })
 
 
 const CustomBorder = glamorous(SectionBorder)({
-	top: 0
+	top: -1
 })

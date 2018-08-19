@@ -35,7 +35,7 @@ const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
 const SecondSection = () => {
-	if(!isMobile) {
+	if(!isMobile || isMobile === `iPad`) {
 		return(
 			<Container>
 				<ContentContainer>
@@ -303,5 +303,5 @@ const SizerTwo=glamorous.div({
 })
 
 const CustomBorder = glamorous(SectionBorder)({
-	bottom: `-20vh`
+	bottom: `-19vh`
 })

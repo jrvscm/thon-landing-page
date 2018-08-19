@@ -35,7 +35,7 @@ const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
 const FourthSection = () => {
-	if(!isMobile){
+	if(!isMobile || isMobile === `iPad`) {
 	return(
 	<Container>
 		<ContentContainer>

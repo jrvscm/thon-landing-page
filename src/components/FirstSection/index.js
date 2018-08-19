@@ -15,7 +15,7 @@ const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
 const FirstSection = () => {
-	if(!isMobile) {
+	if(!isMobile || isMobile === `iPad`) {
 	return(	
 		<Container>
 			<Background>
@@ -24,7 +24,7 @@ const FirstSection = () => {
 						<InnerRow>
 							<Logo src={SvgIcon} />
 						</InnerRow>
-						<InnerRow>
+						<InnerRow style={{marginTop: 30, marginBottom: 30}}>
 							<P>
 								GET FUNDED, LEARN, NETWORK<br/> 
 								THE MARKETPLACE OF INNOVATION<br/>
@@ -88,7 +88,7 @@ const Background = glamorous.div({
 	[mediaQueries.mobile]:{
 		backgroundSize: `140vw, 100vh`,
 		backgroundPosition: `left top`,
-		paddingBottom: `40vh`,
+		paddingBottom: `28vh`,
 	}
 })
 

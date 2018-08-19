@@ -15,7 +15,7 @@ const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
 const Footer = () => {
-	if(!isMobile){
+	if(!isMobile || isMobile === `iPad`) {
 		return(	
 			<Container>
 				<Col>
@@ -141,5 +141,6 @@ const SocialButton = glamorous.img({
 
 const FooterSubscribeButton = glamorous(SubscribeButton)({
 	minWidth: `75vw`,
-	marginBottom: 30
+	marginBottom: 30,
+	marginTop: `0 !important`,
 })

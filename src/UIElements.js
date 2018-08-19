@@ -171,7 +171,7 @@ export const SectionBorder = glamorous.img({
 	height: `20vh`,
 	width: `100vw`,
 	position: `absolute`,
-	bottom: 0,
+	bottom: -1,
 	left: 0,
 	right: 0,
 })
