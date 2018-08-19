@@ -15,7 +15,7 @@ class LandingPage extends Component {
 		super();
 
 		this.state = {
-			hidden: false
+			hidden: true
 		}
 	}
 

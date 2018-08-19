@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import glamorous from 'glamorous';
 
 import Close from '../../assets/images/close-button.svg';
@@ -11,64 +11,100 @@ const MobileDetect = require('mobile-detect');
 const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
-const Popup = ({hidden, toggler}) => {
-	console.log(isMobile)
-	if(hidden === true) {
+class Popup extends Component {
+	constructor(props){
+		super(props);
+
+		this.state = {
+			validator: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+			valid: false,
+			touched: false,
+			value: ''
+		}
+	}
+
+	onUpdate(e) {
+		const { value, validator } = this.state;
+    const valid = validator.test(String(value).toLowerCase());
+    console.log(valid)
+    this.setState({
+      value: e.target.value,
+      valid: valid
+    });
+	}
+
+	touched() {
+		this.setState({
+			touched: true
+		})
+	}
+	
+	render(){
+		const { hidden, toggler } = this.props;
+		const { value, validator, valid } = this.state;
+
+		if(hidden === true) {
+			return(
+				null
+			)
+		} else {
 		return(
-			null
-		)
-	} else {
-		return(
-		<OuterLayer isMobile={isMobile}>
-			<Container isMobile={isMobile}>
-				<Wrapper>
-					<LogoCol isMobile={isMobile}>
-						<Sizer>
-							<Logo src={LogoSvg} />
-							<P color={white}>
-								GET FUNDED, LEARN,<br />  
-								NETWORK<br />
-								THE MARKETPLACE OF<br />
-								INNOVATION AND<br />
-								OPPORTUNITIES<br />
-								FOR HACKATHONS
-							</P>
-						</Sizer>
-					</LogoCol>
-					<FormCol isMobile={isMobile}>
-						<CloseButton 
-							src={Close} 
-							role="button" 
-							onClick={() => toggler()}
-						/>
-						<div style={{width: `100%`}}>
-							<FormTitle
-								color={orange}
-								isMobile={isMobile}
-							>
-								THE WAY TO CHANGE<br />THE WORLD OF STARTUPS
-							</FormTitle>
-							<form autoComplete="off">
-								<label htmlFor="email" />
-								<CustomInput 
+			<OuterLayer isMobile={isMobile}>
+				<Container isMobile={isMobile}>
+					<Wrapper>
+						<LogoCol isMobile={isMobile}>
+							<Sizer>
+								<Logo src={LogoSvg} />
+								<P color={white}>
+									GET FUNDED, LEARN,<br />  
+									NETWORK<br />
+									THE MARKETPLACE OF<br />
+									INNOVATION AND<br />
+									OPPORTUNITIES<br />
+									FOR HACKATHONS
+								</P>
+							</Sizer>
+						</LogoCol>
+						<FormCol isMobile={isMobile}>
+							<CloseButton 
+								src={Close} 
+								role="button" 
+								onClick={() => toggler()}
+							/>
+							<div style={{width: `100%`}}>
+								<FormTitle
+									color={orange}
 									isMobile={isMobile}
-									name="email" 
-									type="email" 
-									autoComplete="off"
-								/>
-							</form>
+								>
+									THE WAY TO CHANGE<br />THE WORLD OF STARTUPS
+								</FormTitle>
+								<form autoComplete="off">
+									<label htmlFor="email" />
+									<CustomInput
+										valid={valid}
+										onClick={() => this.touched()} 
+										value={value}
+										onChange={(e) => this.onUpdate(e)}
+										isMobile={isMobile}
+										name="email" 
+										type="email" 
+										placeHolder="youremail@email.com"
+										autoComplete="off"
+									/>
+								</form>
+								<Row>
+									<CustomSubscribe isMobile={isMobile} type="submit">SUBSCRIBE</CustomSubscribe>
+								</Row>
+							</div>
 							<Row>
-								<CustomSubscribe isMobile={isMobile} type="submit">SUBSCRIBE</CustomSubscribe>
+								<Terms>Privacy Policy and Terms of Use</Terms>
 							</Row>
-						</div>
-						<Row>
-							<Terms>Privacy Policy and Terms of Use</Terms>
-						</Row>
-					</FormCol>
-				</Wrapper>
-			</Container>
-		</OuterLayer>
-		)
+						</FormCol>
+					</Wrapper>
+				</Container>
+			</OuterLayer>
+			)
+		}
 	}
 }
 
@@ -159,13 +195,15 @@ const CustomInput = glamorous.input({
   color: orange,
   paddingLeft: 15,
   paddingRight: 15,
+  transition: `all .2s ease`,
   border: `solid 1px ${lightRed}`,
   '&:focus':{
   	outline: `none`
   }
-}, ({isMobile}) => ({
+}, ({isMobile, valid}) => ({
 	marginTop: !isMobile ? null : 0,
-	marginBottom: !isMobile ? null : `140`
+	marginBottom: !isMobile ? null : `140`,
+	border: valid === true ? `1px solid green` : null
 }))
 
 const CloseButton = glamorous.img({
