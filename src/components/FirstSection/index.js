@@ -57,9 +57,7 @@ const FirstSection = ({toggler}) => {
 						</P>
 					</InnerRow>
 				</Col>
-				<Sizer>
-					<Iphones src={DiscoverInnovation} />
-				</Sizer>
+				<Iphones src={DiscoverInnovation} />
 				<SectionBorder src={CurveImage} />
 			</Background>
 		</Container>			
@@ -176,11 +174,4 @@ const Iphones = glamorous.img({
 
 const GlamorousRow = glamorous(Row)({
 	height: `100%`
-})
-
-const Sizer = glamorous.div({
-	maxWidth: `80%`, 
-	maxHeight: `50%`, 
-	marginLeft: `auto`,
-	marginRight: `auto`
 })
