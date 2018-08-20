@@ -5,7 +5,8 @@ import Close from '../../assets/images/close-button.svg';
 import Background from '../../assets/images/popup-background.png';
 import LogoSvg from '../../assets/images/popup-thon-logo.svg';
 import { Col, Row, P, mediaQueries, SubscribeButton } from '../../UIElements';
-import { white, lightRed, darkRed, orange  } from '../../colors';
+import { white, lightRed,disabledLightRed, darkRed, orange  } from '../../colors';
+import 'whatwg-fetch';
 
 const MobileDetect = require('mobile-detect');
 const md = new MobileDetect(window.navigator.userAgent);
@@ -23,14 +24,30 @@ class Popup extends Component {
 		}
 	}
 
+	onClick() {
+		const { toggler } = this.props;
+		this.setState({
+			value: ''
+		})
+		//closes popup after user is redirected to mailchimp signup
+		setTimeout(() => {
+			toggler();
+			this.setState({
+				valid: false
+			})
+		}, 0)
+	}		
+
 	onUpdate(e) {
 		const { value, validator } = this.state;
     const valid = validator.test(String(value).toLowerCase());
-    console.log(valid)
     this.setState({
       value: e.target.value,
       valid: valid
     });
+
+    const url = `${process.env.REACT_APP_MAILCHIMP_SUBSCRIBE_ENDPOINT}&MERGE0=${e.target.value}`;
+    document.getElementById("mc-embedded-subscribe-form").action = url.toString(); 
 	}
 
 	touched() {
@@ -78,7 +95,16 @@ class Popup extends Component {
 								>
 									THE WAY TO CHANGE<br />THE WORLD OF STARTUPS
 								</FormTitle>
-								<form autoComplete="off">
+								<form action=""
+									method="post" 
+									id="mc-embedded-subscribe-form" 
+									name="mc-embedded-subscribe-form" 
+									className="validate" 
+									target="_blank"
+									name="subscribe" 
+									autoComplete="off" 
+									noValidate
+								>
 									<label htmlFor="email" />
 									<CustomInput
 										valid={valid}
@@ -86,15 +112,23 @@ class Popup extends Component {
 										value={value}
 										onChange={(e) => this.onUpdate(e)}
 										isMobile={isMobile}
-										name="email" 
+										name="EMAIL" 
 										type="email" 
 										placeHolder="youremail@email.com"
 										autoComplete="off"
 									/>
+									<Row>
+										<CustomSubscribe 
+											onClick={() => this.onClick()}
+											disabled={!valid}
+											isMobile={isMobile} 
+											isValid={valid}
+											type="submit" 
+										>
+											SUBSCRIBE
+										</CustomSubscribe>
+									</Row>
 								</form>
-								<Row>
-									<CustomSubscribe isMobile={isMobile} type="submit">SUBSCRIBE</CustomSubscribe>
-								</Row>
 							</div>
 							<Row>
 								<Terms>Privacy Policy and Terms of Use</Terms>
@@ -224,8 +258,9 @@ const LogoCol = glamorous(Col)({
 
 const CustomSubscribe = glamorous(SubscribeButton)({
 	width: `95% !important`,
-}, ({isMobile}) => ({
-	marginTop: !isMobile ? null : `0 !important`
+}, ({isMobile, isValid}) => ({
+	marginTop: !isMobile ? null : `0 !important`,
+	backgroundColor: isValid === false ? disabledLightRed : null
 }))
 
 const FormTitle = glamorous(P)({
