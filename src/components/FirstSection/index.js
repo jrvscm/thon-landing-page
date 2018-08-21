@@ -26,7 +26,14 @@ const FirstSection = ({toggler}) => {
 						</InnerRow>
 						<InnerRow style={{marginTop: 30, marginBottom: 30}}>
 							<P>
-								GET FUNDED, LEARN, NETWORK<br/> 
+								<span 
+									style={{
+										fontFamily: 'SF-Pro-Display-Bold', 
+										fontSize: 40
+								}}
+							>
+								GET FUNDED, LEARN, NETWORK
+							</span><br/> 
 								THE MARKETPLACE OF INNOVATION<br/>
 								AND OPPORTUNITIES FOR HACKATHONS
 							</P>
@@ -51,7 +58,14 @@ const FirstSection = ({toggler}) => {
 					</InnerRow>
 					<InnerRow>
 						<P>
-							GET FUNDED, LEARN, NETWORK<br/> 
+								<span 
+									style={{
+										fontFamily: 'SF-Pro-Display-Bold', 
+										fontSize: 22
+								}}
+							>
+								GET FUNDED, LEARN, NETWORK
+							</span><br/> 
 							THE MARKETPLACE OF INNOVATION<br/>
 							AND OPPORTUNITIES FOR HACKATHONS
 						</P>
@@ -85,6 +99,7 @@ const Background = glamorous.div({
 	backgroundSize: `cover`,
 	backgroundPosition: `center center`,
 	backgroundRepeat: `no-repeat`,
+	backgroundBlendMode: `soft-light`,
 	[mediaQueries.mobile]:{
 		backgroundSize: `140vw, 100vh`,
 		backgroundPosition: `left top`,
@@ -134,9 +149,9 @@ const H1 = glamorous.h1({
 const P = glamorous.p({
 	margin: 0,
 	padding: 0,
-	fontSize: 40,
-	fontFamily: 'SF-Pro-Text-Light',
-	fontWeight: 400,
+	fontSize: 36,
+	fontFamily: 'SF-Pro-Display-Regular',
+	fontWeight: `normal`,
   fontStyle: `normal`,
   fontStretch: `normal`,
   lineHeight: `normal`,

@@ -73,8 +73,10 @@ class Popup extends Component {
 							<Sizer>
 								<Logo src={LogoSvg} />
 								<P color={white}>
-									GET FUNDED, LEARN,<br />  
-									NETWORK<br />
+									<span style={{fontFamily: 'SF-Pro-Display-Heavy'}}>
+										GET FUNDED, LEARN,<br />  
+										NETWORK
+									</span><br />
 									THE MARKETPLACE OF<br />
 									INNOVATION AND<br />
 									OPPORTUNITIES<br />
@@ -264,8 +266,9 @@ const CustomSubscribe = glamorous(SubscribeButton)({
 }))
 
 const FormTitle = glamorous(P)({
-	fontSize: `20px !important`, 
-	fontWeight: 300,
+	fontSize: `20px !important`,
+	fontFamily: 'SF-Pro-Display-Bold', 
+	fontWeight: 900,
 }, ({isMobile}) => ({
 	textAlign: !isMobile ? null : `center`,
 	marginBottom: !isMobile ? null : `80`

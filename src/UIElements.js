@@ -62,8 +62,8 @@ export const LabelCol = glamorous.div({
 })
 
 export const P = glamorous.p({
-	fontFamily: 'SF-Pro-Text-Light',
-  fontSize: 36,
+	fontFamily: 'SF-Pro-Text-Bold',
+  fontSize: 30,
   fontWeight: `bold`,
   fontStyle: `normal`,
   fontStretch: `normal`,
@@ -75,7 +75,10 @@ export const P = glamorous.p({
   },
   [mediaQueries.small]:{
   	fontSize: 25
-  }
+  },
+  [mediaQueries.mobile]:{
+  	fontSize: 20
+  },
 }, ({color}) => ({
   color: color,
 }))
@@ -111,7 +114,7 @@ export const Slashes = glamorous.img({
 export const Text = glamorous.p({
 	fontFamily: `SF-Pro-Text-Light`,
   fontSize: 20,
-  fontWeight: 900,
+  fontWeight: 300,
   fontStyle: `normal`,
   fontStretch: `normal`,
   LineHeight: 1.2,
@@ -122,7 +125,7 @@ export const Text = glamorous.p({
   },
   [mediaQueries.small]:{
   	fontSize: 16
-  }
+  },
  }, ({color}) => ({
  	color: color
 }))
@@ -144,7 +147,7 @@ export const SubscribeButton = glamorous.button({
 	backgroundColor: lightRed,
 	color: white,
 	border: `none`,
-	fontFamily: 'SF-Pro-Text-Light',
+	fontFamily: 'SF-Pro-Display-Regular',
 	fontSize: 30,
 	fontWeight: 500,
 	fontStyle: `normal`,

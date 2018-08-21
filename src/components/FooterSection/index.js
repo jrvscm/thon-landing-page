@@ -65,13 +65,14 @@ const Background = glamorous.div({
 	backgroundImage: `url(${HeaderPattern})`,
 	backgroundSize: `cover`,
 	backgroundPosition: `center center`,
-	backgroundRepeat: `no-repeat`
+	backgroundRepeat: `no-repeat`,
+	backgroundBlendMode: `soft-light`
 })
 
 const H1 = glamorous.h1({
 	color: lightRed,
-	fontFamily: 'SF-Pro-Display-Bold',
-	fontWeight: 300,
+	fontFamily: 'SF-Pro-Display-Heavy',
+	fontWeight: 900,
 	fontSize: 40,
 	margin: 0,
 	color: white,

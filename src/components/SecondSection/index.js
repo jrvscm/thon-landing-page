@@ -43,7 +43,7 @@ const SecondSection = ({toggler}) => {
 						<LabelCol>
 							<VerticalRow>
 								<Slashes src={OrangeSlashes} />
-								<P color={orange}>GET FUNDED</P>
+								<P color={orange} style={{fontSize: 36}}>GET FUNDED</P>
 							</VerticalRow>
 						</LabelCol>
 						<Col>
@@ -81,7 +81,7 @@ const SecondSection = ({toggler}) => {
 						<LabelCol>
 							<VerticalRow>
 								<Slashes src={RedSlashes} />
-								<P color={lightRed}>DISCOVER INNOVATION</P>
+								<P color={lightRed} style={{fontSize: 36}}>DISCOVER INNOVATION</P>
 							</VerticalRow>
 						</LabelCol>
 						<Col style={{width: `60%`, alignItems: `flex-end`}}>
@@ -138,7 +138,9 @@ const SecondSection = ({toggler}) => {
 								marginTop: 25, 
 								marginLeft: 40
 							}}
-						>GET FUNDED</P>
+						>
+							GET FUNDED
+						</P>
 					</LargeSlash>
 					<Row style={{marginTop: -130}}>	
 						<Sizer>

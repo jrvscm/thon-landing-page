@@ -43,7 +43,7 @@ const FourthSection = () => {
 				<LabelCol>
 					<VerticalRow>
 						<Slashes src={OrangeSlashes} />
-						<P color={orange}>SHOWCASE YOUR INNOVATION</P>
+						<P color={orange} style={{fontSize: 36}}>SHOWCASE YOUR INNOVATION</P>
 					</VerticalRow>
 				</LabelCol>
 				<Col>
@@ -79,7 +79,7 @@ const FourthSection = () => {
 				<LabelCol>
 					<VerticalRow>
 						<Slashes src={RedSlashes} />
-						<P color={lightRed}>BUILD YOUR COMMUNITY</P>
+						<P color={lightRed} style={{fontSize: 36}}>BUILD YOUR COMMUNITY</P>
 					</VerticalRow>
 				</LabelCol>
 				<Col style={{width: `60%`, alignItems: `flex-end`}}>
@@ -88,9 +88,9 @@ const FourthSection = () => {
 							Create a fundraising hackathon quickly and easily. Start accepting funding in minutes. Share your event 
 							on Facebook, Instagram, WhatsApp,Twitter, email or text message. Get notified each time someone funds.
 						</Text>
-						<Text color={textGrey} style={{marginBottom: 5}}>
+						<P color={textGrey} style={{marginBottom: 5, fontSize: 20}}>
 							FOR SUPPORTERS, BACKERS, INVESTORS:							
-						</Text>
+						</P>
 						<Text color={textGrey}>
 							Fund hackathon directly from the app. Search for hackathon to support that matter to you.
 						</Text>
@@ -109,11 +109,14 @@ const FourthSection = () => {
 						<LargeSlash path={LargeOrangeSlash}>
 							<P 
 								style={{
+									fontSize: 20,
 									color: orange, 
 									marginTop: 25, 
 									marginLeft: 40
 								}}
-							>SHOWCASE YOUR<br />INNOVATION</P>
+							>
+								SHOWCASE YOUR<br />INNOVATION
+							</P>
 						</LargeSlash>					
 						<Row style={{marginTop: -100}}>
 							<SizerOne>
@@ -146,11 +149,13 @@ const FourthSection = () => {
 					<LargeSlash path={LargeRedSlash}>
 						<P 
 							style={{
+								fontSize: 20,
 								color: lightRed, 
 								marginTop: 25, 
 								marginLeft: 40
 							}}
-						>BUILD YOUR<br />COMMUNITY</P>
+						>BUILD YOUR<br />COMMUNITY
+					</P>
 					</LargeSlash>						
 					<Row style={{marginTop: -100}}>
 						<SizerTwo>
@@ -165,9 +170,9 @@ const FourthSection = () => {
 					</Row>							
 					<Row>
 						<SizerTwo>	
-							<Text color={textGrey} style={{marginBottom: 5}}>
+							<P color={textGrey} style={{marginBottom: 5, fontSize: 16}}>
 								FOR SUPPORTERS, BACKERS, INVESTORS:							
-							</Text>
+							</P>
 							<Text color={textGrey}>
 								Fund hackathon directly from the app. Search for hackathon to support that matter to you.
 							</Text>

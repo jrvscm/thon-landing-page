@@ -36,26 +36,26 @@ const ThirdSection = () => {
 			<LabelCol>
 				<VerticalRow>
 					<Slashes src={WhiteSlashes} />
-					<P color={white}>GET NEW SKILLS</P>
+					<P color={white} style={{fontSize: 36}}>GET NEW SKILLS</P>
 				</VerticalRow>
 			</LabelCol>
 			<Col>
 				<Row style={{paddingTop: 70, paddingBottom: 160}}>
 					<TextCol>
 						<div style={{textAlign: `right`}}>
-							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
+							<P color={white} style={{paddingBottom: 15, fontSize: 20}}>
 								DON'T JUST LEARN – LEARN<br />  
 								TO INNOVATE<br />
 								LEARN SPECIFIC SKILLS:
-							</Text>
+							</P>
 							<Text color={white} style={{paddingBottom: 25, fontWeight: 300}}>
  								Learn from 100+ companies -<br /> 
  								from Cryptocurrency and Blockchain to Artificial Intelligence, 
 								Machine Learning, Data Science, Marketing and Photoshop.							
 							</Text>
-							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
+							<P color={white} style={{paddingBottom: 15, fontSize: 20}}>
 								LEARN FROM EXPERTS:
-							</Text>
+							</P>
 							<Text color={white} style={{fontWeight: 300, marginBottom: 65}}>
 								Be inspired by 1000+ mentors, expert instructors. Keep learning even when you're offline.
 							</Text>
@@ -66,15 +66,15 @@ const ThirdSection = () => {
 					</ImageCol>
 					<TextCol>
 						<div style={{textAlign: `left`}}>
-							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
+							<P color={white} style={{paddingBottom: 15, fontSize: 20}}>
 								BE PART OF A COMMUNITY: 
-							</Text>
+							</P>
 							<Text color={white} style={{paddingBottom: 25, fontWeight: 300}}>
 								Connect with a mentor, interact with other learners, or post questions for your instructor.						
 							</Text>
-							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
+							<P color={white} style={{paddingBottom: 15, fontSize: 20}}>
 								EARN SHAREABLE CERTIFICATES:
-							</Text>
+							</P>
 							<Text color={white} style={{fontWeight: 300, marginBottom: 65}}>
 								Easily share your achievements with employers, colleagues and friends
 								Thon offers free and paid courses including video lecture and reading materials. Paid courses unlock 
@@ -102,20 +102,20 @@ const ThirdSection = () => {
 				<Row style={{marginTop: -100}}>
 					<TextCol>
 						<div>
-							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
+							<P color={white} style={{paddingBottom: 15, fontSize: 16}}>
 								DON'T JUST LEARN – LEARN<br />  
 								TO INNOVATE<br />
 								LEARN SPECIFIC SKILLS:
-							</Text>
-							<Text color={white} style={{paddingBottom: 25, fontWeight: 300}}>
+							</P>
+							<Text color={white} style={{paddingBottom: 25}}>
  								Learn from 100+ companies -<br /> 
  								from Cryptocurrency and Blockchain to Artificial Intelligence, 
 								Machine Learning, Data Science, Marketing and Photoshop.							
 							</Text>
-							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
+							<P color={white} style={{paddingBottom: 15, fontSize: 16}}>
 								LEARN FROM EXPERTS:
-							</Text>
-							<Text color={white} style={{fontWeight: 300, marginBottom: 30}}>
+							</P>
+							<Text color={white} style={{ marginBottom: 30}}>
 								Be inspired by 1000+ mentors, expert instructors. Keep learning even when you're offline.
 							</Text>
 						</div>
@@ -129,16 +129,16 @@ const ThirdSection = () => {
 				<Row>	
 					<TextCol>
 						<div>
-							<Text color={white} style={{paddingBottom: 15, fontWeight: 300, marginTop: 30}}>
+							<P color={white} style={{paddingBottom: 15, fontSize: 16}}>
 								BE PART OF A COMMUNITY: 
-							</Text>
-							<Text color={white} style={{paddingBottom: 25, fontWeight: 300}}>
+							</P>
+							<Text color={white} style={{paddingBottom: 25}}>
 								Connect with a mentor, interact with other learners, or post questions for your instructor.						
 							</Text>
-							<Text color={white} style={{paddingBottom: 15, fontWeight: 300}}>
+							<P color={white} style={{paddingBottom: 15, fontSize: 16}}>
 								EARN SHAREABLE CERTIFICATES:
-							</Text>
-							<Text color={white} style={{fontWeight: 300}}>
+							</P>
+							<Text color={white}>
 								Easily share your achievements with employers, colleagues and friends
 								Thon offers free and paid courses including video lecture and reading materials. Paid courses unlock 
 								quizzes and award you a Certificate
