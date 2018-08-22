@@ -2,6 +2,7 @@ import React from 'react';
 import glamorous from 'glamorous';
 import { Textfit } from 'react-textfit';
 
+import MainHeader from '../../constants/MainHeader.js';
 import CurveImage from  '../../assets/images/curve-top-border-one.png';
 import SvgIcon from '../../assets/images/thon-logo-red.svg';
 import HeaderPattern from '../../assets/images/header-pattern-cropped.png';
@@ -25,18 +26,7 @@ const FirstSection = ({toggler}) => {
 							<Logo src={SvgIcon} />
 						</InnerRow>
 						<InnerRow style={{marginTop: 30, marginBottom: 30}}>
-							<P>
-								<span 
-									style={{
-										fontFamily: 'SF-Pro-Display-Bold', 
-										fontSize: 40
-								}}
-							>
-								GET FUNDED, LEARN, NETWORK
-							</span><br/> 
-								THE MARKETPLACE OF INNOVATION<br/>
-								AND OPPORTUNITIES FOR HACKATHONS
-							</P>
+							<MainHeader />
 						</InnerRow>
 						<InnerRow>
 							<SubscribeButton onClick={() => toggler()}>SUBSCRIBE</SubscribeButton>
@@ -57,18 +47,7 @@ const FirstSection = ({toggler}) => {
 						<Logo src={SvgIcon} />
 					</InnerRow>
 					<InnerRow>
-						<P>
-								<span 
-									style={{
-										fontFamily: 'SF-Pro-Display-Bold', 
-										fontSize: 22
-								}}
-							>
-								GET FUNDED, LEARN, NETWORK
-							</span><br/> 
-							THE MARKETPLACE OF INNOVATION<br/>
-							AND OPPORTUNITIES FOR HACKATHONS
-						</P>
+						<MainHeader />
 					</InnerRow>
 				</Col>
 				<Iphones src={DiscoverInnovation} />
@@ -144,28 +123,6 @@ const H1 = glamorous.h1({
 	fontWeight: `bold`,
 	fontSize: 80,
 	margin: 0
-})
-
-const P = glamorous.p({
-	margin: 0,
-	padding: 0,
-	fontSize: 36,
-	fontFamily: 'SF-Pro-Display-Regular',
-	fontWeight: `normal`,
-  fontStyle: `normal`,
-  fontStretch: `normal`,
-  lineHeight: `normal`,
-  letterSpacing: 0.5,
-  color: white,
-  [mediaQueries.regular]: {
-  	fontSize: 30
-  },
-  [mediaQueries.med]: {
-  	fontSize: 25
-  },
-  [mediaQueries.small]:{
-  	fontSize: 22
-  }
 })
 
 const Iphones = glamorous.img({

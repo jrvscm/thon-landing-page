@@ -4,6 +4,7 @@ import glamorous from 'glamorous';
 import Close from '../../assets/images/close-button.svg';
 import Background from '../../assets/images/popup-background.png';
 import LogoSvg from '../../assets/images/popup-thon-logo.svg';
+import MainHeader from '../../constants/MainHeader';
 import { Col, Row, P, mediaQueries, SubscribeButton } from '../../UIElements';
 import { white, lightRed,disabledLightRed, darkRed, orange  } from '../../colors';
 import 'whatwg-fetch';
@@ -72,16 +73,7 @@ class Popup extends Component {
 						<LogoCol isMobile={isMobile}>
 							<Sizer>
 								<Logo src={LogoSvg} />
-								<P color={white}>
-									<span style={{fontFamily: 'SF-Pro-Display-Heavy', fontSize: 40}}>
-										GET FUNDED, LEARN,<br />  
-										NETWORK
-									</span><br />
-									THE MARKETPLACE OF<br />
-									INNOVATION AND<br />
-									OPPORTUNITIES<br />
-									FOR HACKATHONS
-								</P>
+								<MainHeader style={{fontSize: 40}}/>
 							</Sizer>
 						</LogoCol>
 						<FormCol isMobile={isMobile}>
@@ -215,7 +207,8 @@ const FormCol = glamorous(Col)({
 }))
 
 const Sizer = glamorous.div({
-	paddingLeft: 50
+	paddingLeft: 50,
+	maxWidth: 450
 })
 
 const CustomInput = glamorous.input({
