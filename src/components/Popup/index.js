@@ -171,6 +171,7 @@ const Wrapper = glamorous.div({
 	backgroundSize: `cover`,
 	backgroundPosition: `center center`,
 	backgroundRepeat: `no-repeat`,
+	backgroundBlendMode: `soft-light`,
 	display: `flex`,
 	flexDirection: `row`,
 	alignItems: `center`,
