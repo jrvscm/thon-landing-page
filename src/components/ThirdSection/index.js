@@ -62,7 +62,7 @@ const ThirdSection = () => {
 						</div>
 					</TextCol>
 					<ImageCol>
-						<GlamorousIphoneScreen src={GetNewSkills} />
+						<IphoneScreen src={GetNewSkills} />
 					</ImageCol>
 					<TextCol>
 						<div style={{textAlign: `left`}}>
@@ -123,7 +123,7 @@ const ThirdSection = () => {
 				</Row>
 				<Row>
 					<ImageCol>
-						<GlamorousIphoneScreen src={GetNewSkillsSingle} />
+						<IphoneScreen src={GetNewSkillsSingle} />
 					</ImageCol>
 				</Row>
 				<Row>	
@@ -166,19 +166,6 @@ const Container = glamorous.div({
 	paddingBottom: `30vh`
 })
 
-const GlamorousIphoneScreen = glamorous(IphoneScreen)({
-	width: 450,
-	[mediaQueries.small]:{
-		height: 500,
-		width: 350
-	},
-	[mediaQueries.mobile]:{
-		height: 600,
-		width: 315,
-		boxShadow: `0 0 10px 0 rgba(0, 0, 0, 0.5)`
-	} 
-})
-
 const TextCol = glamorous(Col)({
 	width: `20%`, 
 	alignItems: `flex-start`,
@@ -197,6 +184,8 @@ const ImageCol = glamorous(Col)({
  		marginRight: 70
  	},
  	[mediaQueries.mobile]:{
- 		width: `100%`
+ 		width: `100vw`,
+ 		marginRight: 0,
+ 		marginLeft: 0
  	}
 })

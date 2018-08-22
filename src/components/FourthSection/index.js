@@ -49,7 +49,7 @@ const FourthSection = () => {
 				<Col>
 					<Row>
 						<Col style={{alignItems: `flex-end`, width: `40%`}}>
-							<ShowcaseIphoneScreen src={ShowcaseYourInnovation} />
+							<IphoneScreen src={ShowcaseYourInnovation} />
 						</Col>
 						<Col style={{alignItems: `flex-start`, width: `60%`}}>
 							<SizerOne>
@@ -97,7 +97,7 @@ const FourthSection = () => {
 					</SizerTwo>
 				</Col>
 				<Col style={{width: `40%`, alignItems: `flex-start`}}>
-					<CommunityIphoneScreen src={BuildYourCommunity} />
+					<IphoneScreen src={BuildYourCommunity} />
 				</Col>	
 			</Row>
 		</ContentContainer>	
@@ -135,7 +135,7 @@ const FourthSection = () => {
 							</SizerOne>
 						</Row>
 						<Row>
-							<ShowcaseIphoneScreen src={ShowcaseYourInnovationSingle} />
+							<IphoneScreen src={ShowcaseYourInnovationSingle} />
 						</Row>		
 						<Row>
 							<SizerOne>		
@@ -166,7 +166,7 @@ const FourthSection = () => {
 						</SizerTwo>
 					</Row>
 					<Row>
-						<CommunityIphoneScreen src={BuildYourCommunitySingle} />
+						<IphoneScreen src={BuildYourCommunitySingle} />
 					</Row>							
 					<Row>
 						<SizerTwo>	

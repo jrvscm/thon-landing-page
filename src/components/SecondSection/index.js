@@ -49,7 +49,7 @@ const SecondSection = ({toggler}) => {
 						<Col>
 							<Row>
 								<Col style={{alignItems: `flex-end`, width: `40%`}}>
-									<FundIphoneScreen src={GetFunded} />
+									<IphoneScreen src={GetFunded} />
 								</Col>
 								<Col style={{alignItems: `flex-start`, width: `60%`}}>
 									<Sizer>
@@ -117,7 +117,7 @@ const SecondSection = ({toggler}) => {
 							</SizerTwo>
 						</Col>
 						<Col style={{width: `40%`, alignItems: `flex-start`}}>
-							<DiscoverIphoneScreen src={DiscoverInnovation} />
+							<IphoneScreen src={DiscoverInnovation} style={{objectPosition: `left`}} />
 						</Col>					
 					</Row>
 				</ContentContainer>
@@ -165,7 +165,7 @@ const SecondSection = ({toggler}) => {
 						</Sizer>
 					</Row>
 					<Row>
-						<FundIphoneScreen src={GetFundedSingle} />
+						<IphoneScreen src={GetFundedSingle} />
 					</Row>
 					<HR color={textGrey} />	
 					<LargeSlash path={LargeRedSlash}>
@@ -210,7 +210,7 @@ const SecondSection = ({toggler}) => {
 						</SizerTwo>
 					</Row>
 					<Row>
-						<DiscoverIphoneScreen src={DiscoverInnovationSingle} />		
+						<IphoneScreen src={DiscoverInnovationSingle} />		
 					</Row>									
 				</ContentContainer>
 				<CustomBorder src={CurveImage} />	
@@ -239,36 +239,6 @@ const ContentContainer = glamorous.div({
 	alignItems: `center`,
 	justifyContent: `center`,
 	backgroundColor: white
-})
-
-const FundIphoneScreen = glamorous(IphoneScreen)({
-	width: 380,
-	[mediaQueries.med]:{
-		height: 500,
-		width: 300
-	},
-	[mediaQueries.small]:{
-		height: 450,
-		width: 280
-	},
-	[mediaQueries.mobile]:{
-		height: 600,
-		width: 315,
-		boxShadow: `0 0 10px 0 rgba(0, 0, 0, 0.5)`
-	}
-})
-
-const DiscoverIphoneScreen = glamorous(IphoneScreen)({
-	width: 380,
-	[mediaQueries.small]:{
-		height: 500,
-		width: 320
-	},
-	[mediaQueries.mobile]:{
-		height: 600,
-		width: 315,
-		boxShadow: `0 0 10px 0 rgba(0, 0, 0, 0.5)`
-	}
 })
 
 const Sizer = glamorous.div({

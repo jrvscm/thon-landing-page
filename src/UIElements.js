@@ -36,9 +36,17 @@ export const VerticalRow = glamorous(Row)({
 })
 
 export const IphoneScreen = glamorous.img({
-	height: 600,
-	width: 380,
-	zIndex: 50
+	height: 550,
+	width: `80%`,
+	objectFit: 'contain',
+	objectPosition: `right`,
+	zIndex: 50,
+	[mediaQueries.mobile]:{
+		width: `auto`,
+		objectPosition: `center`,
+		boxSizing: `content-box`,
+		boxShadow: `0 0 10px 0 rgba(0, 0, 0, 0.5)`
+	}
 })
 
 export const LabelCol = glamorous.div({
@@ -178,7 +186,7 @@ export const SectionBorder = glamorous.img({
 	position: `absolute`,
 	bottom: -1,
 	left: 0,
-	right: 0,
+	right: 0
 })
 
 export const LargeSlash = glamorous(Row)({
