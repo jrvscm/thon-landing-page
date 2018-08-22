@@ -88,5 +88,8 @@ const H1 = glamorous.h1({
 
 
 const CustomBorder = glamorous(SectionBorder)({
-	top: -1
+	top: -1,
+	[mediaQueries.mobile]:{
+		objectPosition: `top`
+	}
 })

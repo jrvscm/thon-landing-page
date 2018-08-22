@@ -7,7 +7,7 @@ export const mediaQueries = {
 	regular: '@media only screen and (max-width: 1400px)',
 	med: '@media only screen and (max-width: 1200px)',
   small: '@media only screen and (max-width: 1000px)',
-  mobile: '@media only screen and (max-width: 800px)',
+  mobile: '@media only screen and (max-width: 760px)',
 }
 
 export const Row = glamorous.div({
@@ -186,7 +186,12 @@ export const SectionBorder = glamorous.img({
 	position: `absolute`,
 	bottom: -1,
 	left: 0,
-	right: 0
+	right: 0,
+	[mediaQueries.mobile]:{
+		width: `100%`,
+		objectFit: 'contain',
+		objectPosition: `bottom`		
+	}
 })
 
 export const LargeSlash = glamorous(Row)({

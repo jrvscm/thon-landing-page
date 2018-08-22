@@ -51,7 +51,7 @@ const FirstSection = ({toggler}) => {
 					</InnerRow>
 				</Col>
 				<Iphones src={DiscoverInnovation} />
-				<SectionBorder src={CurveImage} />
+				<SectionBorder style={{objectPosition: '0 22%'}} src={CurveImage} />
 			</Background>
 		</Container>			
 		)
@@ -67,6 +67,9 @@ const Container = glamorous.div({
 	flexDirection: `column`,
 	alignItems: `center`,
 	justyfContent: `center`,
+	[mediaQueries.mobile]:{
+		marginBottom: `-10vh`
+	}
 })
 
 const Background = glamorous.div({

@@ -275,5 +275,8 @@ const SizerTwo=glamorous.div({
 })
 
 const CustomBorder = glamorous(SectionBorder)({
-	bottom: `-19vh`
+	bottom: `-19vh`,
+	[mediaQueries.mobile]:{
+		objectPosition: `top`
+	}
 })

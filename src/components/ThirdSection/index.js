@@ -56,7 +56,7 @@ const ThirdSection = () => {
 							<P color={white} style={{paddingBottom: 15, fontSize: 20}}>
 								LEARN FROM EXPERTS:
 							</P>
-							<Text color={white} style={{fontWeight: 300, marginBottom: 65}}>
+							<Text color={white} style={{fontWeight: 300, marginBottom: 40}}>
 								Be inspired by 1000+ mentors, expert instructors. Keep learning even when you're offline.
 							</Text>
 						</div>
@@ -75,7 +75,7 @@ const ThirdSection = () => {
 							<P color={white} style={{paddingBottom: 15, fontSize: 20}}>
 								EARN SHAREABLE CERTIFICATES:
 							</P>
-							<Text color={white} style={{fontWeight: 300, marginBottom: 65}}>
+							<Text color={white} style={{fontWeight: 300, marginBottom: 40}}>
 								Easily share your achievements with employers, colleagues and friends
 								Thon offers free and paid courses including video lecture and reading materials. Paid courses unlock 
 								quizzes and award you a Certificate
@@ -162,13 +162,15 @@ const Container = glamorous.div({
 	flexDirection: `column`,
 	alignItems: `center`,
 	justifyContent: `center`,
-	marginTop: `30vh`,
-	paddingBottom: `30vh`
+	marginTop: `15vh`,
+	paddingBottom: `15vh`
 })
 
 const TextCol = glamorous(Col)({
 	width: `20%`, 
-	alignItems: `flex-start`,
+	[mediaQueries.med]:{
+		width: `29%`
+	},
 	[mediaQueries.mobile]:{
 		width: `100%`,
 		padding: 40
@@ -180,12 +182,10 @@ const ImageCol = glamorous(Col)({
  	marginRight: 25, 
  	marginLeft: 25,
  	[mediaQueries.regular]:{
- 		marginLeft: 70,
- 		marginRight: 70
+ 		marginLeft: 0,
+ 		marginRight: 0
  	},
  	[mediaQueries.mobile]:{
- 		width: `100vw`,
- 		marginRight: 0,
- 		marginLeft: 0
+ 		width: `100vw`
  	}
 })
