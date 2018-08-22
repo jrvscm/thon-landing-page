@@ -7,7 +7,7 @@ import ThirdSection from '../ThirdSection';
 import FourthSection from '../FourthSection';
 import FooterSection from '../FooterSection';
 import Popup from '../Popup';
-
+import ReactGA from 'react-ga';
 
 class LandingPage extends Component {
 	
@@ -17,6 +17,11 @@ class LandingPage extends Component {
 		this.state = {
 			hidden: true
 		}
+	}
+
+	componentDidMount() {
+		const { location } = this.props.history;
+		ReactGA.pageview(location.pathname)
 	}
 
 	toggleHidden() {

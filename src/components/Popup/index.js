@@ -7,6 +7,7 @@ import LogoSvg from '../../assets/images/popup-thon-logo.svg';
 import MainHeader from '../../constants/MainHeader';
 import { Col, Row, P, mediaQueries, SubscribeButton } from '../../UIElements';
 import { white, lightRed,disabledLightRed, darkRed, orange  } from '../../colors';
+import ReactGA from 'react-ga';
 import 'whatwg-fetch';
 
 const MobileDetect = require('mobile-detect');
@@ -27,9 +28,17 @@ class Popup extends Component {
 
 	onClick() {
 		const { toggler } = this.props;
+		
+		//send to google analytics 
+		ReactGA.event({
+  		category: 'User',
+  		action: 'subscribed to list'
+		});
+		
 		this.setState({
 			value: ''
 		})
+		
 		//closes popup after user is redirected to mailchimp signup
 		setTimeout(() => {
 			toggler();
