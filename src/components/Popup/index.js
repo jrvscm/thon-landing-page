@@ -73,7 +73,7 @@ class Popup extends Component {
 							<Sizer>
 								<Logo src={LogoSvg} />
 								<P color={white}>
-									<span style={{fontFamily: 'SF-Pro-Display-Heavy'}}>
+									<span style={{fontFamily: 'SF-Pro-Display-Heavy', fontSize: 40}}>
 										GET FUNDED, LEARN,<br />  
 										NETWORK
 									</span><br />
