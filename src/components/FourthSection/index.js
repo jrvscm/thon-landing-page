@@ -3,13 +3,13 @@ import glamorous from 'glamorous';
 
 import LargeOrangeSlash from '../../assets/images/large-orange-slashes.svg';
 import LargeRedSlash from '../../assets/images/large-red-slashes.svg';
-import CurveImage from '../../assets/images/curve-top-border-two.png';
-import BuildYourCommunity from '../../assets/images/build-your-community.png';
-import BuildYourCommunitySingle from '../../assets/images/build-your-community-single.png';
-import ShowcaseYourInnovation from '../../assets/images/showcase-your-innovation.png';
-import ShowcaseYourInnovationSingle from '../../assets/images/showcase-your-innovation-single.png';
-import OrangeSlashes from '../../assets/images/orange-slashes.png'; 
-import RedSlashes from '../../assets/images/red-slashes.png'; 
+import CurveImage from '../../assets/images/images_min/curve-top-border-two.png';
+import BuildYourCommunity from '../../assets/images/images_min/build-your-community.png';
+import BuildYourCommunitySingle from '../../assets/images/images_min/build-your-community-single.png';
+import ShowcaseYourInnovation from '../../assets/images/images_min/showcase-your-innovation.png';
+import ShowcaseYourInnovationSingle from '../../assets/images/images_min/showcase-your-innovation-single.png';
+import OrangeSlashes from '../../assets/images/images_min/orange-slashes.png'; 
+import RedSlashes from '../../assets/images/images_min/red-slashes.png'; 
 import {
 	LargeSlash,
 	SectionBorder,
@@ -192,7 +192,7 @@ const Container = glamorous.div({
 	display: `flex`,
 	flexDirection: `column`,
 	alignItems: `center`,
-	justifyContent: `center`
+	justifyContent: `center`,
 })
 
 const ContentContainer = glamorous.div({
@@ -201,7 +201,8 @@ const ContentContainer = glamorous.div({
 	flexDirection: `column`,
 	alignItems: `center`,
 	justifyContent: `center`,
-	backgroundColor: white
+	backgroundColor: white,
+	paddingBottom: 20
 })
 
 const ShowcaseIphoneScreen = glamorous(IphoneScreen)({

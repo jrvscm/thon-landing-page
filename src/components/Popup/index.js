@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import glamorous from 'glamorous';
 
 import Close from '../../assets/images/close-button.svg';
-import Background from '../../assets/images/popup-background.png';
+import Background from '../../assets/images/images_min/popup-background.png';
 import LogoSvg from '../../assets/images/popup-thon-logo.svg';
 import MainHeader from '../../constants/MainHeader';
 import { Col, Row, P, mediaQueries, SubscribeButton } from '../../UIElements';
