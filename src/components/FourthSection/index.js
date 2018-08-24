@@ -97,7 +97,7 @@ const FourthSection = () => {
 					</SizerTwo>
 				</Col>
 				<Col style={{width: `40%`, alignItems: `flex-start`}}>
-					<IphoneScreen src={BuildYourCommunity} />
+					<IphoneScreen src={BuildYourCommunity} style={{objectPosition: `left`}} />
 				</Col>	
 			</Row>
 		</ContentContainer>	
