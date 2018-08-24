@@ -3,13 +3,13 @@ import glamorous from 'glamorous';
 
 import LargeOrangeSlash from '../../assets/images/large-orange-slashes.svg';
 import LargeRedSlash from '../../assets/images/large-red-slashes.svg';
-import CurveImage from '../../assets/images/images_min/curve-bottom-border-one.png';
-import GetFunded from '../../assets/images/images_min/get-funded-arrows.png';
-import GetFundedSingle from '../../assets/images/images_min/get-funded.png';
-import DiscoverInnovation from '../../assets/images/images_min/discover-innovation-arrows.png';
-import DiscoverInnovationSingle from '../../assets/images/images_min/discover-innovation-single.png';
-import OrangeSlashes from '../../assets/images/images_min/orange-slashes.png';
-import RedSlashes from '../../assets/images/images_min/red-slashes.png';
+import CurveImage from '../../assets/images/curve-bottom-border-one.png';
+import GetFunded from '../../assets/images/get-funded-arrows.png';
+import GetFundedSingle from '../../assets/images/get-funded.png';
+import DiscoverInnovation from '../../assets/images/discover-innovation-arrows.png';
+import DiscoverInnovationSingle from '../../assets/images/discover-innovation-single.png';
+import OrangeSlashes from '../../assets/images/orange-slashes.png';
+import RedSlashes from '../../assets/images/red-slashes.png';
 import { orange, darkRed, lightRed, white, textGrey } from '../../colors.js';
 import { 
 	LargeSlash,

@@ -2,8 +2,8 @@ import React from 'react';
 import glamorous from 'glamorous';
 
 import Footer from '../Footer';
-import CurveImage from '../../assets/images/images_min/curve-bottom-border-two.png';
-import HeaderPattern from '../../assets/images/images_min/header-pattern-cropped.png';
+import CurveImage from '../../assets/images/curve-bottom-border-two.png';
+import HeaderPattern from '../../assets/images/header-pattern-cropped.png';
 import { orange, darkRed, lightRed, white } from '../../colors.js';
 import { mediaQueries, Row, Col, SectionBorder } from '../../UIElements.js';
 

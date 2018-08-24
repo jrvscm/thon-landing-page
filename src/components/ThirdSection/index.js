@@ -2,11 +2,11 @@ import React from 'react';
 import glamorous from 'glamorous';
 
 import LargeWhiteSlash from '../../assets/images/large-white-slashes.svg';
-import CurveImage from '../../assets/images/images_min/curve-top-border-two.png';
-import RedSlashes from '../../assets/images/images_min/red-slashes.png';
-import GetNewSkills from '../../assets/images/images_min/get-new-skills-arrows.png';
-import WhiteSlashes from '../../assets/images/images_min/white-slashes.png';
-import GetNewSkillsSingle from '../../assets/images/images_min/get-new-skills.png';
+import CurveImage from '../../assets/images/curve-top-border-two.png';
+import RedSlashes from '../../assets/images/red-slashes.png';
+import GetNewSkills from '../../assets/images/get-new-skills-arrows.png';
+import WhiteSlashes from '../../assets/images/white-slashes.png';
+import GetNewSkillsSingle from '../../assets/images/get-new-skills.png';
 import { white } from '../../colors.js';
 import {
 	LargeSlash, 

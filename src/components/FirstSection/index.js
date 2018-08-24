@@ -3,11 +3,11 @@ import glamorous from 'glamorous';
 import { Textfit } from 'react-textfit';
 
 import MainHeader from '../../constants/MainHeader.js';
-import CurveImage from  '../../assets/images/images_min/curve-top-border-one.png';
+import CurveImage from  '../../assets/images/curve-top-border-one.png';
 import SvgIcon from '../../assets/images/thon-logo-red.svg';
-import HeaderPattern from '../../assets/images/images_min/header-pattern-cropped.png';
-import StackedIphones from '../../assets/images/images_min/stacked-iphones.png';
-import DiscoverInnovation from '../../assets/images/images_min/discover-innovation.png';
+import HeaderPattern from '../../assets/images/header-pattern-cropped.png';
+import StackedIphones from '../../assets/images/stacked-iphones.png';
+import DiscoverInnovation from '../../assets/images/discover-innovation.png';
 import { orange, darkRed, lightRed, white } from '../../colors.js';
 import { mediaQueries, Row, SubscribeButton, SectionBorder } from '../../UIElements.js';
 

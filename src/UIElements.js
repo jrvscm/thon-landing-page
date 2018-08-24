@@ -1,5 +1,5 @@
 import glamorous from 'glamorous';
-import Bullet from './assets/images/images_min/arrow-bullet.png';
+import Bullet from './assets/images/arrow-bullet.png';
 import { white, lightRed } from './colors';
 
 export const mediaQueries = {
