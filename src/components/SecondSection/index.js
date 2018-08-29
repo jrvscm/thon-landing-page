@@ -43,7 +43,7 @@ const SecondSection = ({toggler}) => {
 						<LabelCol>
 							<VerticalRow>
 								<Slashes src={OrangeSlashes} />
-								<P color={orange} style={{fontSize: 36}}>GET FUNDED</P>
+								<P color={orange} style={{fontSize: 36}}>MEDIA</P>
 							</VerticalRow>
 						</LabelCol>
 						<Col>
@@ -53,7 +53,36 @@ const SecondSection = ({toggler}) => {
 								</Col>
 								<Col style={{alignItems: `flex-start`, width: `60%`}}>
 									<Sizer>
-										<P color={orange} style={{marginBottom: 15}}>FUND YOUR FAVORITE INNOVATION</P>
+										<P color={orange} style={{marginBottom: 15}}>DISCOVER</P>
+										<Text color={textGrey} style={{marginBottom: 25}}>
+											Discover your next favorite innovation app, website, product. We showcase the best new products
+											and apps every day.
+										</Text>
+										<Text color={textGrey} style={{marginBottom: 25}}>
+											This is the place to find innovation you love and share them with friends. A global community of
+											innovators founders, mentors, investors, journalists, creators, entrepreneurs and makers.
+										</Text>										
+									</Sizer>
+								</Col>		
+							</Row>
+						</Col>
+					</Row>
+					<HR color={textGrey} />
+					<Row>
+						<LabelCol>
+							<VerticalRow>
+								<Slashes src={RedSlashes} />
+								<P color={lightRed} style={{fontSize: 36}}>GET FUNDED</P>
+							</VerticalRow>
+						</LabelCol>
+            <Col>
+							<Row>
+								<Col style={{alignItems: `flex-end`, width: `40%`}}>
+									<IphoneScreen src={GetFunded} />
+								</Col>
+								<Col style={{alignItems: `flex-start`, width: `60%`}}>
+									<Sizer>
+										<P color={lightRed} style={{marginBottom: 15}}>FUND YOUR FAVORITE INNOVATION</P>
 										<Text color={textGrey} style={{marginBottom: 25}}>
 											#Thon is a place where innovators and passionate backers come together to support ideas
 											born at hackathons. Explore and Follow innovative apps, websites, products and more, and
@@ -74,50 +103,6 @@ const SecondSection = ({toggler}) => {
 									</Sizer>
 								</Col>		
 							</Row>
-						</Col>
-					</Row>
-					<HR color={textGrey} />
-					<Row>
-						<LabelCol>
-							<VerticalRow>
-								<Slashes src={RedSlashes} />
-								<P color={lightRed} style={{fontSize: 36}}>DISCOVER INNOVATION</P>
-							</VerticalRow>
-						</LabelCol>
-						<Col style={{width: `60%`, alignItems: `flex-end`}}>
-							<SizerTwo>
-								<P color={lightRed} style={{marginBottom: 15}}>UPVOTE</P>
-								<Text color={textGrey} style={{marginBottom: 25}}>
-									When you're logged in to #Thon, you'll be able to upvote items to help determine their rank.
-									You get one vote per item, but you can change it after it's logged. The number appearing at
-									the up arrows is the submission's score: the number of funds raised. Upvotes allow you to get
-									exposure for your message, brand, or product and have a snowball effect on the traffic a post
-									receives.
-								</Text>
-								<Text color={textGrey} style={{marginBottom: 25}}>
-									An upvote on thon is very different than a vote on any other social-media website. Clicking
-									that little arrow is much more than a "Like" on Facebook or a "Heart" on Instagram. On #Thon,
-									votes are rewarded with US dollars or cryptocurrencies!
-								</Text>
-								<Text color={textGrey} style={{marginBottom: 25}}>
-									When you click the upvote button you are telling the Blockchain, "this is where I want X amount
-									of the daily rewards pool to go." The amount that you're able to direct is dependent on the amount
-									of Privilege you have. So the more Privilege you have, the more of the daily rewards pool you can
-									direct to ideas you like!
-								</Text>
-								<P color={lightRed} style={{marginBottom: 15}}>DISCOVER</P>
-								<Text color={textGrey} style={{marginBottom: 25}}>
-									Discover your next favorite innovation app, website, product. We showcase the best new products
-									and apps every day.
-								</Text>
-								<Text color={textGrey} style={{marginBottom: 25}}>
-									This is the place to find innovation you love and share them with friends. A global community of
-									innovators founders, mentors, investors, journalists, creators, entrepreneurs and makers.
-								</Text>
-							</SizerTwo>
-						</Col>
-						<Col style={{width: `40%`, alignItems: `flex-start`}}>
-							<IphoneScreen src={DiscoverInnovation} style={{objectPosition: `left`}} />
 						</Col>					
 					</Row>
 				</ContentContainer>
@@ -275,7 +260,10 @@ const SizerTwo=glamorous.div({
 })
 
 const CustomBorder = glamorous(SectionBorder)({
-	bottom: `-19vh`,
+	bottom: `-40vh`,
+	[mediaQueries.med]:{
+		bottom: `-20vh`
+	},
 	[mediaQueries.mobile]:{
 		objectPosition: `top`
 	}

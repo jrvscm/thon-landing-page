@@ -12,6 +12,7 @@ export const mediaQueries = {
 
 export const Row = glamorous.div({
 	width: `100%`,
+	maxWidth: 1500,
 	display: `flex`,
 	flexDirection: `row`,
 	alignItems: `center`,
@@ -96,6 +97,7 @@ export const HR = glamorous.hr({
 	marginBottom: 100,
   width: `70%`,
   height: 0,
+  maxWidth: 1400,
 }, ({color}) => ({
   border: `solid .5px ${color}`
 }))
@@ -181,12 +183,15 @@ export const SubscribeButton = glamorous.button({
 })
 
 export const SectionBorder = glamorous.img({
-	height: `20vh`,
+	height: `40vh`,
 	width: `100vw`,
 	position: `absolute`,
 	bottom: -1,
 	left: 0,
 	right: 0,
+	[mediaQueries.med]:{
+		height: `20vh`
+	},
 	[mediaQueries.mobile]:{
 		width: `100%`,
 		objectFit: 'contain',
