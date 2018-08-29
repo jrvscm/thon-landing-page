@@ -49,8 +49,8 @@ const FirstSection = ({toggler}) => {
 					<InnerRow>
 						<MainHeader />
 					</InnerRow>
+					<Iphones style={{marginBottom: `-30vh`}} src={DiscoverInnovation} />
 				</Col>
-				<Iphones src={DiscoverInnovation} />
 				<SectionBorder style={{objectPosition: '0 22%'}} src={CurveImage} />
 			</Background>
 		</Container>			
@@ -87,9 +87,10 @@ const Background = glamorous.div({
 	backgroundRepeat: `no-repeat`,
 	backgroundBlendMode: `soft-light`,
 	[mediaQueries.mobile]:{
+		height: `100%`,
 		backgroundSize: `140vw, 100vh`,
 		backgroundPosition: `left top`,
-		paddingBottom: `28vh`,
+		paddingBottom:0,
 	}
 })
 

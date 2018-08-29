@@ -5,9 +5,9 @@ import LargeOrangeSlash from '../../assets/images/large-orange-slashes.svg';
 import LargeRedSlash from '../../assets/images/large-red-slashes.svg';
 import CurveImage from '../../assets/images/curve-bottom-border-one.png';
 import GetFunded from '../../assets/images/get-funded-arrows.png';
+import Feed from '../../assets/images/feed.png';
+import FeedSingle from '../../assets/images/feed-single.png';
 import GetFundedSingle from '../../assets/images/get-funded.png';
-import DiscoverInnovation from '../../assets/images/discover-innovation-arrows.png';
-import DiscoverInnovationSingle from '../../assets/images/discover-innovation-single.png';
 import OrangeSlashes from '../../assets/images/orange-slashes.png';
 import RedSlashes from '../../assets/images/red-slashes.png';
 import { orange, darkRed, lightRed, white, textGrey } from '../../colors.js';
@@ -49,7 +49,7 @@ const SecondSection = ({toggler}) => {
 						<Col>
 							<Row>
 								<Col style={{alignItems: `flex-end`, width: `40%`}}>
-									<IphoneScreen src={GetFunded} />
+									<IphoneScreen src={Feed} />
 								</Col>
 								<Col style={{alignItems: `flex-start`, width: `60%`}}>
 									<Sizer>
@@ -124,12 +124,38 @@ const SecondSection = ({toggler}) => {
 								marginLeft: 40
 							}}
 						>
-							GET FUNDED
+							MEDIA
 						</P>
 					</LargeSlash>
 					<Row style={{marginTop: -130}}>	
 						<Sizer>
-							<P color={orange} style={{marginBottom: 15, fontSize: 16}}>FUND YOUR<br />FAVORITE INNOVATION</P>
+							<P color={orange} style={{marginBottom: 15}}>DISCOVER</P>
+							<Text color={textGrey} style={{marginBottom: 25}}>
+								Discover your next favorite innovation app, website, product. We showcase the best new products
+								and apps every day.
+							</Text>
+							<Text color={textGrey} style={{marginBottom: 25}}>
+								This is the place to find innovation you love and share them with friends. A global community of
+								innovators founders, mentors, investors, journalists, creators, entrepreneurs and makers.
+							</Text>	
+						</Sizer>
+					</Row>
+					<Row>
+						<IphoneScreen src={FeedSingle} />
+					</Row>
+					<HR color={textGrey} />	
+					<LargeSlash path={LargeRedSlash}>
+						<P 
+							style={{
+								color: lightRed, 
+								marginTop: 25, 
+								marginLeft: 40
+							}}
+						>GET FUNDED</P>
+					</LargeSlash>				
+					<Row style={{marginTop: -100}}>
+						<SizerTwo>
+							<P color={lightRed} style={{marginBottom: 15}}>FUND YOUR FAVORITE INNOVATION</P>
 							<Text color={textGrey} style={{marginBottom: 25}}>
 								#Thon is a place where innovators and passionate backers come together to support ideas
 								born at hackathons. Explore and Follow innovative apps, websites, products and more, and
@@ -141,62 +167,21 @@ const SecondSection = ({toggler}) => {
 								<Li><Text color={textGrey}>Save your favorites and get reminders before projects end</Text></Li>
 								<Li><Text color={textGrey}>Share innovative ideas with friends via email, messaging, social media and more</Text></Li>
 							</List>
+						</SizerTwo>
+					</Row>
+					<Row style={{marginTop: 50, marginBottom: 50}}>
+						<IphoneScreen src={GetFundedSingle} />		
+					</Row>
+					<Row>
+						<SizerTwo>								
 							<Text color={textGrey}>Innovators can stay up to date from anywhere:</Text>
 							<List style={{paddingBottom: 25}}>
 								<Li><Text color={textGrey}>Get notified each time you receive funding</Text></Li>
 								<Li><Text color={textGrey}>Keep up with comments and upvotes</Text></Li>
 								<Li><Text color={textGrey}>Post updates and respond to backer messages</Text></Li>
-							</List>
-						</Sizer>
-					</Row>
-					<Row>
-						<IphoneScreen src={GetFundedSingle} />
-					</Row>
-					<HR color={textGrey} />	
-					<LargeSlash path={LargeRedSlash}>
-						<P 
-							style={{
-								color: lightRed, 
-								marginTop: 25, 
-								marginLeft: 40
-							}}
-						>DISCOVER<br />INNOVATION</P>
-					</LargeSlash>				
-					<Row style={{marginTop: -100}}>
-						<SizerTwo>
-							<P color={lightRed} style={{marginBottom: 15, fontSize: 16}}>UPVOTE</P>
-							<Text color={textGrey} style={{marginBottom: 25}}>
-								When you're logged in to #Thon, you'll be able to upvote items to help determine their rank.
-								You get one vote per item, but you can change it after it's logged. The number appearing at
-								the up arrows is the submission's score: the number of funds raised. Upvotes allow you to get
-								exposure for your message, brand, or product and have a snowball effect on the traffic a post
-								receives.
-							</Text>
-							<Text color={textGrey} style={{marginBottom: 25}}>
-								An upvote on thon is very different than a vote on any other social-media website. Clicking
-								that little arrow is much more than a "Like" on Facebook or a "Heart" on Instagram. On #Thon,
-								votes are rewarded with US dollars or cryptocurrencies!
-							</Text>
-							<Text color={textGrey} style={{marginBottom: 25}}>
-								When you click the upvote button you are telling the Blockchain, "this is where I want X amount
-								of the daily rewards pool to go." The amount that you're able to direct is dependent on the amount
-								of Privilege you have. So the more Privilege you have, the more of the daily rewards pool you can
-								direct to ideas you like!
-							</Text>
-							<P color={lightRed} style={{marginBottom: 15, fontSize: 16}}>DISCOVER</P>
-							<Text color={textGrey} style={{marginBottom: 25}}>
-								Discover your next favorite innovation app, website, product. We showcase the best new products
-								and apps every day.
-							</Text>
-							<Text color={textGrey} style={{marginBottom: 25}}>
-								This is the place to find innovation you love and share them with friends. A global community of
-								innovators founders, mentors, investors, journalists, creators, entrepreneurs and makers.
-							</Text>
+							</List>							
 						</SizerTwo>
-					</Row>
-					<Row>
-						<IphoneScreen src={DiscoverInnovationSingle} />		
-					</Row>									
+					</Row>								
 				</ContentContainer>
 				<CustomBorder src={CurveImage} />	
 			</Container>
