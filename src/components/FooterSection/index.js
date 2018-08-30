@@ -49,7 +49,7 @@ export default FooterSection;
 const Container = glamorous.div({
 	position: `relative`,
 	height: `100%`,
-	width: `100vw`,
+	width: `100%`,
 	[mediaQueries.mobile]:{
 		display: `flex`,
 		flexDirection: `column`,

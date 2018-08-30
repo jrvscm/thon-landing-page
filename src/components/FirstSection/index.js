@@ -160,7 +160,7 @@ const GlamorousRow = glamorous(Row)({
 
 const CustomBorder = glamorous(SectionBorder)({
 	[mediaQueries.landscape]:{
-		objectPosition: 'top',
+		objectPosition: `top`,
 		height: 150
 	}
 })

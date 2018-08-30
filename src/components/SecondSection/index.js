@@ -201,10 +201,10 @@ const Container = glamorous.div({
 	alignItems: `center`,
 	justifyContent: `center`,
 	[mediaQueries.mobile]:{
-		marginTop: 55
+		marginTop: 57,
 	},
-	[mediaQueries.mobileTall]:{
-		marginTop: 30
+	[mediaQueries.iphoneX]:{
+		marginTop: 65
 	},
 	[mediaQueries.landscape]:{
 		marginTop: 0

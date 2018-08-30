@@ -7,8 +7,8 @@ export const mediaQueries = {
 	regular: '@media only screen and (max-width: 1400px)',
 	med: '@media only screen and (max-width: 1200px)',
   small: '@media only screen and (max-width: 1000px)',
-  mobile: '@media only screen and (max-width: 824px)',
-  mobileTall: '@media only screen and (height: 812px)',
+  mobile: '@media only screen and (max-width: 823px)',
+  iphoneX: '@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3)',
   landscape: '@media only screen and (max-width: 850px) and (orientation: landscape)'
 }
 
