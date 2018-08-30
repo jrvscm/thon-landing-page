@@ -8,6 +8,7 @@ export const mediaQueries = {
 	med: '@media only screen and (max-width: 1200px)',
   small: '@media only screen and (max-width: 1000px)',
   mobile: '@media only screen and (max-width: 760px)',
+  landscape: '@media only screen and (max-width: 825px) and (orientation: landscape)'
 }
 
 export const Row = glamorous.div({
@@ -196,6 +197,10 @@ export const SectionBorder = glamorous.img({
 		width: `100%`,
 		objectFit: 'contain',
 		objectPosition: `bottom`		
+	},
+	[mediaQueries.landscape]:{
+		width: `100%`,
+		objectFit: 'fill',
 	}
 })
 

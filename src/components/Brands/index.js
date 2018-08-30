@@ -85,6 +85,9 @@ const Logo = glamorous.img({
 	},
 	[mediaQueries.mobile]:{
 		marginBottom: `50vh`
+	},
+	[mediaQueries.landscape]:{
+		marginBottom: `320`
 	}
 })
 

@@ -88,6 +88,10 @@ const H1 = glamorous.h1({
 		fontSize: 22,
 		marginTop: `30vh`,
 		marginBottom: `30vh`
+	},
+	[mediaQueries.landscape]:{
+		marginTop: 200,
+		marginBottom: 200
 	}
 })
 

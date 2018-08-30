@@ -51,7 +51,7 @@ const FirstSection = ({toggler}) => {
 					</InnerRow>
 					<Iphones style={{marginBottom: `-30vh`}} src={DiscoverInnovation} />
 				</Col>
-				<SectionBorder style={{objectPosition: '0 22%'}} src={CurveImage} />
+				<CustomBorder src={CurveImage} />
 			</Background>
 		</Container>			
 		)
@@ -156,4 +156,11 @@ const Iphones = glamorous.img({
 const GlamorousRow = glamorous(Row)({
 	height: `100%`,
 	maxWidth: `80%`
+})
+
+const CustomBorder = glamorous(SectionBorder)({
+	[mediaQueries.landscape]:{
+		objectPosition: 'top',
+		height: 150
+	}
 })

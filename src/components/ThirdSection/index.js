@@ -250,6 +250,10 @@ const Container = glamorous.div({
 	[mediaQueries.mobile]:{
 		marginTop: `15vh`,
 		paddingBottom: `10vh`
+	},
+	[mediaQueries.landscape]:{
+		marginTop: 200,
+		paddingBottom: 200
 	}
 })
 
