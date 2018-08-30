@@ -1,6 +1,7 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
+
 import LargeWhiteSlash from '../../assets/images/large-white-slashes.svg';
 import CurveImage from '../../assets/images/curve-top-border-two.png';
 import RedSlashes from '../../assets/images/red-slashes.png';
@@ -202,7 +203,7 @@ const ThirdSection = () => {
 				</Row>
 				<Row>
 					<ImageCol>
-						<IphoneScreen src={GetFundedSingle} />
+						<IphoneScreen src={GetNewSkillsSingle} />
 					</ImageCol>
 				</Row>	
 				<Row>
