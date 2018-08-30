@@ -35,7 +35,7 @@ const FirstSection = ({toggler}) => {
 					<Iphones src={StackedIphones} />
 				</GlamorousRow>
 				<SectionBorder src={CurveImage} />	
-			</Background>	
+			</Background>		
 		</Container>
 	)
 } else {
@@ -49,9 +49,9 @@ const FirstSection = ({toggler}) => {
 					<InnerRow>
 						<MainHeader />
 					</InnerRow>
+					<Iphones style={{marginBottom: `-30vh`}} src={DiscoverInnovation} />
 				</Col>
-				<Iphones src={DiscoverInnovation} />
-				<SectionBorder style={{objectPosition: '0 22%'}} src={CurveImage} />
+				<CustomBorder src={CurveImage} />
 			</Background>
 		</Container>			
 		)
@@ -76,16 +76,21 @@ const Background = glamorous.div({
 	position: `relative`, 
 	height: `100vh`,
 	width: `100vw`,
-	paddingBottom: `20vh`,
+	display: `flex`,
+	flexDirection: `row`,
+	alignItems: `center`,
+	justifyContent: `center`,
+	paddingBottom: `40vh`,
 	backgroundImage: `url(${HeaderPattern})`,
 	backgroundSize: `cover`,
 	backgroundPosition: `center center`,
 	backgroundRepeat: `no-repeat`,
 	backgroundBlendMode: `soft-light`,
 	[mediaQueries.mobile]:{
+		height: `100%`,
 		backgroundSize: `140vw, 100vh`,
 		backgroundPosition: `left top`,
-		paddingBottom: `28vh`,
+		paddingBottom:0,
 	}
 })
 
@@ -130,6 +135,7 @@ const H1 = glamorous.h1({
 
 const Iphones = glamorous.img({
 	height: `90%`,
+	maxheight: 1100,
 	marginTop: 100,
 	[mediaQueries.regular]:{
 		height: `70%`,
@@ -148,5 +154,13 @@ const Iphones = glamorous.img({
 })
 
 const GlamorousRow = glamorous(Row)({
-	height: `100%`
+	height: `100%`,
+	maxWidth: `80%`
+})
+
+const CustomBorder = glamorous(SectionBorder)({
+	[mediaQueries.landscape]:{
+		objectPosition: 'top',
+		height: 150
+	}
 })

@@ -2,6 +2,7 @@ import React from 'react';
 import glamorous from 'glamorous';
 
 import Footer from '../Footer';
+import Brands from '../Brands';
 import CurveImage from '../../assets/images/curve-bottom-border-two.png';
 import HeaderPattern from '../../assets/images/header-pattern-cropped.png';
 import { orange, darkRed, lightRed, white } from '../../colors.js';
@@ -22,18 +23,21 @@ const FooterSection = ({toggler}) => {
 						ON THE BLOCKCHAIN
 					</H1>
 				</Background>
+				<Brands />
 			<Footer toggler={toggler} />
 		</Container>
 	)
-	} else {
+} else {
 		return(
 			<Container>
 				<CustomBorder src={CurveImage} />
 				<H1>
-					PROTECT YOUR INTELECTUAL<br /> 
+					PROTECT YOUR<br/> 
+					INTELECTUAL<br /> 
 					PROPERTY<br />
 					ON THE BLOCKCHAIN
-				</H1>
+				</H1>			
+				<Brands />
 				<Footer toggler={toggler}/>
 			</Container>		
 		)
@@ -45,13 +49,13 @@ export default FooterSection;
 const Container = glamorous.div({
 	position: `relative`,
 	height: `100%`,
-	width: `100%`,
+	width: `100vw`,
 	[mediaQueries.mobile]:{
 		display: `flex`,
 		flexDirection: `column`,
 		alignItems: `center`,
 		justifyContent: `center`,
-		height: `100vh`
+		minHeight: `100vh`
 	}
 })
 
@@ -60,7 +64,7 @@ const Background = glamorous.div({
 	flexDirection: `column`,
 	alignItems: `center`,
 	justifyContent: `center`,
-	height: `100vh`,
+	height: `120vh`,
 	width: `100vw`,
 	backgroundImage: `url(${HeaderPattern})`,
 	backgroundSize: `cover`,
@@ -74,22 +78,26 @@ const H1 = glamorous.h1({
 	fontFamily: 'SF-Pro-Display-Heavy',
 	fontWeight: 900,
 	fontSize: 40,
-	margin: 0,
+	marginBottom: `10vh`,
 	color: white,
 	textAlign: `center`,
 	[mediaQueries.small]:{
 		fontSize: 32,
-		marginBottom: `15vh`
 	},
 	[mediaQueries.mobile]:{
-		fontSize: 22
+		fontSize: 22,
+		marginTop: `30vh`,
+		marginBottom: `30vh`
+	},
+	[mediaQueries.landscape]:{
+		marginTop: 200,
+		marginBottom: 200
 	}
 })
 
 
 const CustomBorder = glamorous(SectionBorder)({
 	top: -1,
-
 	[mediaQueries.mobile]:{
 		objectPosition: `top`
 	}

@@ -59,7 +59,7 @@ const Container = glamorous.div({
 	bottom: 0,
 	left: 0, 
 	right: 0,
-	height: `auto`,
+	height: 167,
 	backgroundColor: orange,
 	display: `flex`,
 	flexDirection: `row`,
