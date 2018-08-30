@@ -7,8 +7,9 @@ export const mediaQueries = {
 	regular: '@media only screen and (max-width: 1400px)',
 	med: '@media only screen and (max-width: 1200px)',
   small: '@media only screen and (max-width: 1000px)',
-  mobile: '@media only screen and (max-width: 760px)',
-  landscape: '@media only screen and (max-width: 825px) and (orientation: landscape)'
+  mobile: '@media only screen and (max-width: 824px)',
+  mobileTall: '@media only screen and (height: 812px)',
+  landscape: '@media only screen and (max-width: 850px) and (orientation: landscape)'
 }
 
 export const Row = glamorous.div({

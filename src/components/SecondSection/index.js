@@ -199,7 +199,16 @@ const Container = glamorous.div({
 	display: `flex`,
 	flexDirection: `column`,
 	alignItems: `center`,
-	justifyContent: `center`
+	justifyContent: `center`,
+	[mediaQueries.mobile]:{
+		marginTop: 55
+	},
+	[mediaQueries.mobileTall]:{
+		marginTop: 30
+	},
+	[mediaQueries.landscape]:{
+		marginTop: 0
+	}
 })
 
 const ContentContainer = glamorous.div({
